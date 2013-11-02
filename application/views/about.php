@@ -14,7 +14,7 @@
 			<p>We have pretty cool hairstyles, and we're also often accused of being the same person even if we aren't. Unless we are.
 			</p>
 
-			<p>We also get a lot of help from friends like Ted and others who wish to remain anonymous. Thanks guys, we love you.</p>
+			<p>We also get a lot of help from friends who wish to remain anonymous. Thanks guys, we love you.</p>
 		</div>
 	</div>
 </section>

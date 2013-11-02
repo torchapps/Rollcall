@@ -3,12 +3,10 @@
 class Members extends CI_Controller {
 
   public function index(){
-    show_404();
     $this->wrapper->load_view('members/index', array('members' => $this->member_model->all()));
   }
 
   public function edit($member_id){
-    show_404();
     if(!empty($_POST)){
       $_POST['id'] = $member_id;
       $this->member_model->update($_POST);

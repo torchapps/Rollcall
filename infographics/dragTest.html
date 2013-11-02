@@ -1,0 +1,54 @@
+<html>
+<head>
+	<script src="http://d3js.org/d3.v2.js"></script>
+</head>
+<body>
+	<div id="canvas-1">
+	</div>
+	<script type="text/javascript">
+
+		
+
+		// function dragStart(d, i){
+		// }
+		var distance = 0;
+
+		function dragMove(d, i){
+			distance += d3.event.dx;
+			d3.select(".drawGroup").attr("transform", function(){return "translate("+distance+", 0)"});
+			///console.log('lol');
+			console.log(distance);
+			//redrawGraph();
+		}
+
+		// function dragEnd(d,i){
+		// }
+
+		var drag = d3.behavior.drag()
+			//.on("dragstart", dragStart)
+			.on("drag", dragMove)
+			//.on("dragend", dragEnd);
+
+		var canvas = d3.select("#canvas-1")
+			.append("svg:svg")
+				.attr("width", 600)
+				.attr("height", 300)
+			.append("g")
+				.attr("class", "drawGroup")
+			.append("circle")
+				.attr("r", 20)
+				.attr("cy", 40)
+				.attr("cx", 80);
+
+		d3.select("g")
+			.append("circle")
+				.attr("r", 20)
+				.attr("cy", 40)
+				.attr("cx", 160);
+
+		d3.select("g").call(drag);
+
+	</script>
+</body>
+
+</html>
