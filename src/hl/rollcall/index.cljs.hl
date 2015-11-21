@@ -21,6 +21,16 @@
 (papa dates "dates.csv")
 (papa roll-call "roll_call.csv")
 
+(defc= id-attendance
+	(group-by (fn [d] (:member_id d)) roll-call))
+
+(defc= members-with-attendance
+	(mapv (fn [member]
+					(let [dates-attended (get id-attendance (:id member)) #_(filterv (fn [r] (= (:id member) (:member_id r))) roll-call)]
+						(merge member {:dates-attended dates-attended}))) members))
+
+;;(cell= (println members-with-attendance))
+
 (defelem toolbar-item
 	[_ children]
 	(div :class "toolbar-item"
@@ -46,12 +56,16 @@
 							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
 				 (div :class "panel-content split-view"
 							(ul :class "minor view scrollable list-view"
-									(loop-tpl :bindings [member members]
+									(loop-tpl :bindings [member members-with-attendance]
 														(let [id (cell= (:id member))
+																	selected-id (cell= (:id selected-member))
 																	full-name (cell= (:full_name member))]
 															(li :class (cell= {:testing true
-																								 :selected (= selected-member id)})
-																	:click #(reset! selected-member @id)
+																								 :selected (= selected-id id)})
+																	:click #(reset! selected-member @member)
 																	(div full-name)))))
 							(div :class "major view"
-									 "yo"))))))
+									 (let [attendance (cell= (count (:dates-attended selected-member)))
+												 member-name (cell= (:full_name selected-member))]
+										 (div attendance
+													(div member-name)))))))))
