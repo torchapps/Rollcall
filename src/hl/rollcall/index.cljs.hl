@@ -1,11 +1,19 @@
-(page "index.html")
+(page "index.html"
+			(:require [cljsjs.papaparse]))
+
+(.parse js/Papa "members.csv" #js {:download true
+																	 :header true
+																	 :complete (fn [results]
+																							 (let [r (js->clj results :keywordize-keys true)]
+																								 (println (get r :data))))})
 
 (defelem toolbar-item
 	[_ children]
 	(div :class "toolbar-item"
 			 children))
 
-(defelem spacer [_ _] (div :class "spacer"))
+(defelem spacer [_ _]
+	(div :class "spacer"))
 
 (html
  (head
@@ -14,14 +22,12 @@
 	(div :class "panel fill"
 			 (div :class "toolbar"
 						(h1 :class "toolbar-item" "Rollcall")
-
 						(spacer)
-
 						(toolbar-item "Our Data")
 						(toolbar-item "This site")
 						(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
 			 (div :class "panel-content split-view"
 						(div :class "major view"
 								 "yo")
-						(div :class "minor view"
+						(div :class "minor view scrollable"
 								 "yay")))))

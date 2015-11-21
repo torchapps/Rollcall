@@ -7,9 +7,10 @@
 								 [org.clojure/clojurescript "1.7.170"]
 								 [tailrecursion/boot-jetty  "0.1.0"]
 								 [jeluard/boot-notify "0.2.0" :scope "test"]
+								 [cljsjs/papaparse "4.1.1-1"]
 								 [garden "1.3.0-SNAPSHOT"]]
  :source-paths #{"src/hl" "src/garden" "src/tasks"}
- :asset-paths  #{"assets"})
+ :asset-paths  #{"assets" "data"})
 
 (require
  '[adzerk.boot-cljs         :refer [cljs]]

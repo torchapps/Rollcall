@@ -21,6 +21,7 @@
 					:left 0
 					:right 0
 					:bottom 0}]
+	[:.scrollable {:overflow-y "auto"}]
 
 	;; Toolbar
 	[:.toolbar {:display "flex"
