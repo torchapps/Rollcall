@@ -1,11 +1,16 @@
 (page "index.html"
 			(:require [cljsjs.papaparse]))
 
+(defc members [])
+
 (.parse js/Papa "members.csv" #js {:download true
 																	 :header true
+																	 :skipEmptyLines true
 																	 :complete (fn [results]
-																							 (let [r (js->clj results :keywordize-keys true)]
-																								 (println (get r :data))))})
+																							 (let [r (js->clj results :keywordize-keys true)
+																										 data (:data r)]
+																								 #_(println data)
+																								 (reset! members data)))})
 
 (defelem toolbar-item
 	[_ children]
@@ -19,15 +24,23 @@
  (head
 	(link :href "css/main.css" :rel "stylesheet"))
  (body
-	(div :class "panel fill"
-			 (div :class "toolbar"
-						(h1 :class "toolbar-item" "Rollcall")
-						(spacer)
-						(toolbar-item "Our Data")
-						(toolbar-item "This site")
-						(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
-			 (div :class "panel-content split-view"
-						(div :class "major view"
-								 "yo")
-						(div :class "minor view scrollable"
-								 "yay")))))
+	(let [current-view (cell :index)
+				selected-member (cell nil)]
+		(div :class "panel fill"
+				 (div :class "toolbar"
+							(h1 :class "toolbar-item" "Rollcall")
+							(spacer)
+							(toolbar-item "About our data")
+							(toolbar-item "About this site")
+							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
+				 (div :class "panel-content split-view"
+							(ul :class "minor view scrollable list-view"
+									(loop-tpl :bindings [member members]
+														(let [id (cell= (:id member))
+																	full-name (cell= (:full_name member))]
+															(li :class (cell= {:testing true
+																								 :selected (= selected-member id)})
+																	:click #(reset! selected-member @id)
+																	full-name))))
+							(div :class "major view"
+									 "yo"))))))

@@ -12,7 +12,8 @@
 	;; Utility
 	[:body {:background-color "white"
 					:margin 0
-					:font-family font-family}]
+					:font-family font-family
+					:font-weight 300}]
 
 	[:a {:color accent}]
 
@@ -22,6 +23,16 @@
 					:right 0
 					:bottom 0}]
 	[:.scrollable {:overflow-y "auto"}]
+
+	[:.list-view {:list-style "none"
+								:padding 0
+								:margin 0}
+	 [:li {;;:height (px 64)
+				 :padding (px 16)
+				 :border-bottom "1px solid #eee"
+				 :cursor "pointer"}
+		[:&.selected {:background-color accent
+									:color light}]]]
 
 	;; Toolbar
 	[:.toolbar {:display "flex"
