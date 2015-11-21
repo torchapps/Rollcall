@@ -1,7 +1,27 @@
 (page "index.html")
 
+(defelem toolbar-item
+	[_ children]
+	(div :class "toolbar-item"
+			 children))
+
+(defelem spacer [_ _] (div :class "spacer"))
+
 (html
-  (head
-    (link :href "css/main.css" :rel "stylesheet"))
-  (body
-    (h1 "Hello, Hoplon!")))
+ (head
+	(link :href "css/main.css" :rel "stylesheet"))
+ (body
+	(div :class "panel fill"
+			 (div :class "toolbar"
+						(h1 :class "toolbar-item" "Rollcall")
+
+						(spacer)
+
+						(toolbar-item "Our Data")
+						(toolbar-item "This site")
+						(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
+			 (div :class "panel-content split-view"
+						(div :class "major view"
+								 "yo")
+						(div :class "minor view"
+								 "yay")))))
