@@ -1,27 +1,38 @@
 (page "index.html"
 			(:require [cljsjs.papaparse]))
 
-(defc members [])
+(defn papa
+	[cell url]
+	(.parse js/Papa url #js {:download true
+													 :header true
+													 :skipEmptyLines true
+													 :complete (fn [results]
+																			 (let [r (js->clj results :keywordize-keys true)
+																						 data (:data r)]
+																				 (reset! cell data)))}))
 
-(.parse js/Papa "members.csv" #js {:download true
-																	 :header true
-																	 :skipEmptyLines true
-																	 :complete (fn [results]
-																							 (let [r (js->clj results :keywordize-keys true)
-																										 data (:data r)]
-																								 #_(println data)
-																								 (reset! members data)))})
+(defc members [])
+(defc journals [])
+(defc dates [])
+(defc roll-call [])
+
+(papa members "members.csv")
+(papa journals "journals.csv")
+(papa dates "dates.csv")
+(papa roll-call "roll_call.csv")
 
 (defelem toolbar-item
 	[_ children]
 	(div :class "toolbar-item"
 			 children))
 
-(defelem spacer [_ _]
+(defelem spacer
+	[_ _]
 	(div :class "spacer"))
 
 (html
  (head
+	(link :href "https://fonts.googleapis.com/css?family=Roboto:400,300,700" :rel "stylesheet")
 	(link :href "css/main.css" :rel "stylesheet"))
  (body
 	(let [current-view (cell :index)
@@ -41,6 +52,6 @@
 															(li :class (cell= {:testing true
 																								 :selected (= selected-member id)})
 																	:click #(reset! selected-member @id)
-																	full-name))))
+																	(div full-name)))))
 							(div :class "major view"
 									 "yo"))))))

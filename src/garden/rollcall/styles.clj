@@ -6,7 +6,7 @@
 (def dark "#232C33")
 (def light "white")
 
-(def font-family "\"SF UI Text\" sans-serif")
+(def font-family "\"Roboto\", sans-serif")
 
 (defstyles base
 	;; Utility
