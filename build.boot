@@ -9,7 +9,7 @@
 								 [jeluard/boot-notify "0.2.0" :scope "test"]
 								 [cljsjs/papaparse "4.1.1-1"]
 								 [garden "1.3.0-SNAPSHOT"]]
- :source-paths #{"src/hl" "src/garden" "src/tasks"}
+ :source-paths #{"src/hl" "src/garden" "src/tasks" "src/cljs"}
  :asset-paths  #{"assets" "data"})
 
 (require

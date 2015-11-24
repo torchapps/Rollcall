@@ -15,6 +15,10 @@
 					:font-family font-family
 					:font-weight 300}]
 
+	[:.hidden {:display "none"}]
+
+	[:.padded {:padding (px 16)}]
+
 	[:a {:color accent}]
 
 	[:.fill {:position "absolute"
@@ -28,9 +32,11 @@
 								:padding 0
 								:margin 0}
 	 [:li {;;:height (px 64)
+				 :display "flex"
 				 :padding (px 16)
 				 :border-bottom "1px solid #eee"
 				 :cursor "pointer"}
+		[:.name {:flex 1}]
 		[:&.selected {:background-color accent
 									:color light}]]]
 
