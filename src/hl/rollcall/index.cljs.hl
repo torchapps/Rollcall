@@ -24,9 +24,8 @@
 (defc= dates data/dates)
 (defc roll-call [])
 
-(defc= session-dates
-	(group-by (fn [date] {:year (t/year date)
-												:month (t/month date)})
+(defc= dates-by-year
+	(group-by (fn [date] (t/year date))
 						(mapv #(tf/parse date-formatter (:date %))
 									dates)))
 
@@ -128,10 +127,17 @@
 													 (text "~{attendance} sessions present in the roll call"))
 													(div
 													 (text "~{term-length} sessions in term as of November 24, 2012"))
-													(ul :class "dates-attended sessions"
-															(loop-tpl :bindings [date dates]
-																				(let [dt (cell= (tf/parse date-formatter (:date date)))
-																							formatted-date (cell= (if dt (tf/unparse (tf/formatter "MMM d, YYYY") dt)))
-																							was-present? (cell= (some #(t/= % dt) dates-attended))]
-																					(li :class (cell= {:present was-present?})
-																							formatted-date))))))))))))
+													(div :class "dates-attended sessions"
+															 (loop-tpl :bindings [[year year-dates] dates-by-year]
+																				 (div :class "year"
+																							(h3 :class "year-header" year)
+																							(div :class "dates"
+																									 (loop-tpl :bindings [date year-dates]
+																														 (let [formatted-date (cell= (tf/unparse (tf/formatter "MMM d") date))
+																																	 was-present? (cell= (some #(t/= % date) dates-attended))]
+																															 (div :class (cell= {:date true :present was-present?}) formatted-date)))))
+																				 #_(let [dt (cell= (tf/parse date-formatter (:date date)))
+																								 formatted-date (cell= (if dt (tf/unparse (tf/formatter "MMM d, YYYY") dt)))
+																								 was-present? (cell= (some #(t/= % dt) dates-attended))]
+																						 (li :class (cell= {:present was-present?})
+																								 formatted-date))))))))))))

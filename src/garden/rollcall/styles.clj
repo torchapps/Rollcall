@@ -71,5 +71,21 @@
 	 [:.first-week {:justify-content "flex-end"}]
 	 [:.day {:width (percent (/ 100 7))}]]
 
-	[:.sessions
-	 [:.present {:background-color "pink"}]])
+	[:.sessions {:list-style "none"
+							 :padding 0
+							 :margin 0}
+	 [:.year {:margin-bottom (px 64)}
+		[:.year-header {:margin-top (px 8)}]]
+	 [:.dates {:display "flex"
+						 :flex-wrap "wrap"}]
+	 [:.date {:width (px 64)
+						:height (px 64)
+						:font-size (px 10)
+						:font-weight "bold"
+						:text-transform "uppercase"
+						:margin (px 1)
+						:padding (px 4)
+						:box-sizing "border-box"
+						:color "#ccc"}]
+	 [:.present {:background-color accent
+							 :color light}]])
