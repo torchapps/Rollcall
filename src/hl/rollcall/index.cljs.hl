@@ -123,11 +123,11 @@
 												 member-name (cell= (:full_name selected-member))]
 										 (div :class (cell= {:padded true :hidden (nil? selected-member)})
 													(h1 :class "member-name" member-name)
-													(div :class "info"
-															 (h2 (text "~{presence} attendance"))
-															 (div
-																(strong (text "~{attendance} of ~{term-length}"))
-																(div (text" sessions present in the roll call"))))
+													(dl :class "info"
+															(dd (text "~{presence}"))
+															(dt "attendance")
+															(dd (text "~{attendance} of ~{term-length}"))
+															(dt "sessions present in the roll call"))
 													(div :class "dates-attended sessions"
 															 (loop-tpl :bindings [[year year-dates] dates-by-year]
 																				 (div :class "year"

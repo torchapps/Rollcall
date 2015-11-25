@@ -74,7 +74,11 @@
 
 	[:.member-name {:font-weight 300}]
 
-	[:.info {:margin-bottom (px 64)}]
+	[:.info {:margin-bottom (px 64)}
+	 [:dd {:margin-left 0
+				 :font-weight "bold"
+				 :font-size (px 24)}]
+	 [:dt {:margin-bottom (px 16)}]]
 
 	[:.sessions {:list-style "none"
 							 :padding 0
