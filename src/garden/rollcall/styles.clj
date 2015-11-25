@@ -6,7 +6,7 @@
 (def dark "#232C33")
 (def light "white")
 
-(def font-family "\"Roboto\", sans-serif")
+(def font-family "\"Raleway\", sans-serif")
 
 (defstyles base
 	;; Utility
@@ -24,7 +24,8 @@
 					:left 0
 					:right 0
 					:bottom 0}]
-	[:.scrollable {:overflow-y "auto"}]
+	[:.scrollable {:overflow-y "auto"
+								 :overflow-x "hidden"}]
 
 	[:.list-view {:list-style "none"
 								:padding 0
@@ -70,6 +71,10 @@
 	 [:.week {:display "flex"}]
 	 [:.first-week {:justify-content "flex-end"}]
 	 [:.day {:width (percent (/ 100 7))}]]
+
+	[:.member-name {:font-weight 300}]
+
+	[:.info {:margin-bottom (px 64)}]
 
 	[:.sessions {:list-style "none"
 							 :padding 0
