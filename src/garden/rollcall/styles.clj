@@ -20,10 +20,10 @@
 	[:a {:color accent}]
 
 	[:.fill {:position "absolute"
-					:top 0
-					:left 0
-					:right 0
-					:bottom 0}]
+					 :top 0
+					 :left 0
+					 :right 0
+					 :bottom 0}]
 	[:.scrollable {:overflow-y "auto"
 								 :overflow-x "hidden"}]
 
@@ -72,13 +72,17 @@
 	 [:.first-week {:justify-content "flex-end"}]
 	 [:.day {:width (percent (/ 100 7))}]]
 
-	[:.member-name {:font-weight 300}]
+	[:.member-name {:font-weight 300
+									:text-align "center"}]
 
-	[:.info {:margin-bottom (px 64)}
-	 [:dd {:margin-left 0
-				 :font-weight "bold"
-				 :font-size (px 24)}]
-	 [:dt {:margin-bottom (px 16)}]]
+	[:.info-group {:display "flex"
+								 :justify-content "center"
+								 :margin-bottom (px 64)}
+	 [:.info {:text-align "center"}
+		[:.value {:margin-left 0
+							:font-weight "bold"
+							:font-size (px 24)}]
+		[:&+.info {:margin-left (px 32)}]]]
 
 	[:.sessions {:list-style "none"
 							 :padding 0
