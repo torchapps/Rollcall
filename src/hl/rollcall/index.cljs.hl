@@ -5,6 +5,8 @@
 								[cljs-time.core :as t]
 								[cljs-time.format :as tf]))
 
+(.addEventListener js/window "resize" (fn [] (.log js/console "resized")))
+
 (defn papa
 	[cell url]
 	(.parse js/Papa url #js {:download true
@@ -18,6 +20,8 @@
 (def date-formatter (tf/formatters :date))
 
 (defn percent [n] (str n "%"))
+
+(defc selected-date nil)
 
 (defc members [])
 (defc journals [])
@@ -63,36 +67,18 @@
 	[_ _]
 	(div :class "spacer"))
 
-(defelem calendar
-	[{:keys [month year highlight]} _]
-	(div :class "calendar"
-			 (div :class "week week-header"
-						(loop-tpl :bindings [week-header (cell [:M :T :W :T :F :S :Su])]
-											(div :class "day"
-													 (cell= (name week-header)))))
-			 (let [first-day (cell= (t/date-time year month))
-						 first-day-of-week (cell= (t/day-of-week first-day))
-						 number-of-days (cell= (t/number-of-days-in-the-month year month))
-						 weeks (cell= (->> (inc number-of-days)
-															 (range 1)
-															 (map #(t/date-time year month %))
-															 (partition-by (fn [date-time]
-																							 (let [adjusted-day (- (+ first-day-of-week (t/day date-time)) 2)
-																										 week-number (js/Math.floor (/ adjusted-day 7))]
-																								 week-number)))))]
-				 (loop-tpl :bindings [week weeks]
-									 (let [first-week? (cell= (some (fn [day]
-																										(= 1 (t/day day))) week))]
-										 (div :class (cell= {:week true :first-week first-week?})
-													(loop-tpl :bindings [day week]
-																		(let [day-number (cell= (t/day day))]
-																			(div :class "day" day-number)))))))))
+(defelem dialog
+	[{:keys [open?]} dialog-contents]
+	(div :class (cell= {:dialog true :hidden (not open?)})
+			 (div :class "curtain"
+						:click #(reset! open? nil))))
 
 (html
  (head
 	(link :href "https://fonts.googleapis.com/css?family=Raleway:400,300,700" :rel "stylesheet")
 	(link :href "css/main.css" :rel "stylesheet"))
  (body
+	(dialog :open? selected-date)
 	(let [current-view (cell :index)
 				selected-member (cell nil)]
 		(div :class "panel fill"
@@ -124,12 +110,12 @@
 										 (div :class (cell= {:padded true :hidden (nil? selected-member)})
 													(h1 :class "member-name" member-name)
 													(div :class "info-group"
-															(div :class "info"
-																	 (div :class "value" (text "~{presence}"))
-																	 (div :class "desc" "attendance"))
-															(div :class "info"
-																	 (div :class "value" (text "~{attendance} of ~{term-length}"))
-																	 (div :class "desc" "sessions present in the roll call")))
+															 (div :class "info"
+																		(div :class "value" (text "~{presence}"))
+																		(div :class "desc" "attendance"))
+															 (div :class "info"
+																		(div :class "value" (text "~{attendance} of ~{term-length}"))
+																		(div :class "desc" "sessions present in the roll call")))
 													(div :class "dates-attended sessions"
 															 (loop-tpl :bindings [[year year-dates] dates-by-year]
 																				 (div :class "year"
@@ -138,9 +124,6 @@
 																									 (loop-tpl :bindings [date year-dates]
 																														 (let [formatted-date (cell= (tf/unparse (tf/formatter "MMM d") date))
 																																	 was-present? (cell= (some #(t/= % date) dates-attended))]
-																															 (div :class (cell= {:date true :present was-present?}) formatted-date)))))
-																				 #_(let [dt (cell= (tf/parse date-formatter (:date date)))
-																								 formatted-date (cell= (if dt (tf/unparse (tf/formatter "MMM d, YYYY") dt)))
-																								 was-present? (cell= (some #(t/= % dt) dates-attended))]
-																						 (li :class (cell= {:present was-present?})
-																								 formatted-date))))))))))))
+																															 (div :class (cell= {:date true :present was-present?})
+																																		:click #(reset! selected-date @date)
+																																		formatted-date)))))))))))))))

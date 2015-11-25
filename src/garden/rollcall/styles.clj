@@ -101,4 +101,19 @@
 						:box-sizing "border-box"
 						:color "#ccc"}]
 	 [:.present {:background-color accent
-							 :color light}]])
+							 :color light}]]
+
+	[:.dialog {:position "fixed"
+						 :top 0
+						 :left 0
+						 :right 0
+						 :bottom 0
+						 :z-index 10}
+	 [:&.hidden {:display "none"}]]
+	[:.curtain {:background-color "black"
+							:opacity 0.8
+							:position "absolute"
+							:top 0
+							:left 0
+							:right 0
+							:bottom 0}])
