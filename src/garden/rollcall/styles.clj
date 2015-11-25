@@ -14,11 +14,9 @@
 					:margin 0
 					:font-family font-family
 					:font-weight 300}]
-
+	[:.spacer {:flex 1}]
 	[:.hidden {:display "none"}]
-
 	[:.padded {:padding (px 16)}]
-
 	[:a {:color accent}]
 
 	[:.fill {:position "absolute"
@@ -48,7 +46,6 @@
 							:padding-left (px 8)
 							:padding-right (px 8)
 							:align-items "center"}
-	 [:.spacer {:flex 1}]
 	 [:.toolbar-item {:padding-left (px 8)
 										:padding-right (px 8)}]
 	 [:h1 {:margin 0
@@ -65,4 +62,14 @@
 								 :align-items "stretch"}
 	 [:.major {:flex 3}]
 	 [:.minor {:flex 1}]
-	 [:.view+.view {:border-left "1px solid #eee"}]])
+	 [:.view+.view {:border-left "1px solid #eee"}]]
+
+	;; Calendar
+	[:.calendar
+	 [:.week-header {:font-weight "bold"}]
+	 [:.week {:display "flex"}]
+	 [:.first-week {:justify-content "flex-end"}]
+	 [:.day {:width (percent (/ 100 7))}]]
+
+	[:.sessions
+	 [:.present {:background-color "pink"}]])

@@ -3,3 +3,5 @@
 /.nrepl-port
 /.repl-history
 .DS_Store
+.nrepl-history
+out

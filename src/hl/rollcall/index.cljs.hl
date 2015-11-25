@@ -1,6 +1,9 @@
 (page "index.html"
 			(:require [cljsjs.papaparse]
-								[rollcall.data :as data]))
+								[rollcall.data :as data]
+								[goog.math :as math]
+								[cljs-time.core :as t]
+								[cljs-time.format :as tf]))
 
 (defn papa
 	[cell url]
@@ -12,6 +15,8 @@
 																						 data (:data r)]
 																				 (reset! cell data)))}))
 
+(def date-formatter (tf/formatters :date))
+
 (defn percent [n] (str n "%"))
 
 (defc members [])
@@ -19,9 +24,14 @@
 (defc= dates data/dates)
 (defc roll-call [])
 
+(defc= session-dates
+	(group-by (fn [date] {:year (t/year date)
+												:month (t/month date)})
+						(mapv #(tf/parse date-formatter (:date %))
+									dates)))
+
 (papa members "members.csv")
 (papa journals "journals.csv")
-;;(papa dates "dates.csv") removed because replaced with namespaced presorted data
 (papa roll-call "roll_call.csv")
 
 (defc= id-attendance
@@ -54,6 +64,31 @@
 	[_ _]
 	(div :class "spacer"))
 
+(defelem calendar
+	[{:keys [month year highlight]} _]
+	(div :class "calendar"
+			 (div :class "week week-header"
+						(loop-tpl :bindings [week-header (cell [:M :T :W :T :F :S :Su])]
+											(div :class "day"
+													 (cell= (name week-header)))))
+			 (let [first-day (cell= (t/date-time year month))
+						 first-day-of-week (cell= (t/day-of-week first-day))
+						 number-of-days (cell= (t/number-of-days-in-the-month year month))
+						 weeks (cell= (->> (inc number-of-days)
+															 (range 1)
+															 (map #(t/date-time year month %))
+															 (partition-by (fn [date-time]
+																							 (let [adjusted-day (- (+ first-day-of-week (t/day date-time)) 2)
+																										 week-number (js/Math.floor (/ adjusted-day 7))]
+																								 week-number)))))]
+				 (loop-tpl :bindings [week weeks]
+									 (let [first-week? (cell= (some (fn [day]
+																										(= 1 (t/day day))) week))]
+										 (div :class (cell= {:week true :first-week first-week?})
+													(loop-tpl :bindings [day week]
+																		(let [day-number (cell= (t/day day))]
+																			(div :class "day" day-number)))))))))
+
 (html
  (head
 	(link :href "https://fonts.googleapis.com/css?family=Roboto:400,300,700" :rel "stylesheet")
@@ -77,10 +112,13 @@
 															(li :class (cell= {:testing true
 																								 :selected (= selected-id id)})
 																	:click #(reset! selected-member @member)
-																	(div :class "name" full-name)
+																	(div full-name)
+																	(spacer)
 																	(div (cell= (percent (:presence member))))))))
-							(div :class "major view"
-									 (let [attendance (cell= (count (:dates-attended selected-member)))
+							(div :class "major view scrollable"
+									 (let [dates-attended (cell= (mapv #(tf/parse date-formatter %)
+																										 (:dates-attended selected-member)))
+												 attendance (cell= (count dates-attended))
 												 term-length (cell= (:term-length selected-member))
 												 member-name (cell= (:full_name selected-member))]
 										 (div :class (cell= {:padded true :hidden (nil? selected-member)})
@@ -89,4 +127,11 @@
 													(div
 													 (text "~{attendance} sessions present in the roll call"))
 													(div
-													 (text "~{term-length} days in term as of November 24, 2012"))))))))))
+													 (text "~{term-length} sessions in term as of November 24, 2012"))
+													(ul :class "dates-attended sessions"
+															(loop-tpl :bindings [date dates]
+																				(let [dt (cell= (tf/parse date-formatter (:date date)))
+																							formatted-date (cell= (if dt (tf/unparse (tf/formatter "MMM d, YYYY") dt)))
+																							was-present? (cell= (some #(t/= % dt) dates-attended))]
+																					(li :class (cell= {:present was-present?})
+																							formatted-date))))))))))))
