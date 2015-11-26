@@ -55,8 +55,10 @@
 
 	;; Panel
 	[:.panel {:display "flex"
-						:flex-direction "column"}
+						:flex-direction "column"
+						:background-color light}
 	 [:.panel-content {:flex 1}]]
+
 
 	;; Split View
 	[:.split-view {:display "flex"
@@ -65,21 +67,23 @@
 	 [:.minor {:flex 1}]
 	 [:.view+.view {:border-left "1px solid #eee"}]]
 
+
+	;; Header
 	[:header {:padding-top (px 64)
 						:padding-bottom (px 64)}
-	 [:h1 {:margin-top 0}]]
+	 [:.member-name {:font-weight 300
+									 :text-align "center"
+									 :margin-top 0}]
+	 [:.info-group {:display "flex"
+									:justify-content "center"}
+		[:.info {:text-align "center"}
+		 [:.value {:margin-left 0
+							 :font-weight "bold"
+							 :font-size (px 24)}]
+		 [:&+.info {:margin-left (px 32)}]]]]
 
-	[:.member-name {:font-weight 300
-									:text-align "center"}]
 
-	[:.info-group {:display "flex"
-								 :justify-content "center"}
-	 [:.info {:text-align "center"}
-		[:.value {:margin-left 0
-							:font-weight "bold"
-							:font-size (px 24)}]
-		[:&+.info {:margin-left (px 32)}]]]
-
+	;; Sessions
 	[:.sessions {:list-style "none"
 							 :padding 0
 							 :margin 0}
@@ -98,7 +102,7 @@
 						:color "#ccc"}]
 	 [:.present {:background-color accent
 							 :color light}]]
-	;; dialog
+	;; Dialog
 	[:.dialog {:position "fixed"
 						 :top 0
 						 :left 0
@@ -106,12 +110,19 @@
 						 :bottom 0
 						 :z-index 10
 						 :opacity 1
-						 :transition "opacity 0.3s"}
+						 :transition "opacity 0.3s"
+						 :display "flex"
+						 :justify-content "center"
+						 :align-items "center"}
 	 [:&.anim-hidden {:pointer-events "none"
-										:opacity 0}]]
-	[:.curtain {:background-color "rgba(0,0,0,0.8)"
-							:position "absolute"
-							:top 0
-							:left 0
-							:right 0
-							:bottom 0}])
+										:opacity 0}]
+	 [:&.curtained {:background-color "rgba(0,0,0,0.8)"
+									:position "absolute"
+									:top 0
+									:left 0
+									:right 0
+									:bottom 0}]
+	 [:.dialog-contents {:width (px 320)
+											 :transition "transform 0.3s"}
+		[:&.anim-hidden {:pointer-events "none"
+										 :transform "translateY(64px)"}]]])

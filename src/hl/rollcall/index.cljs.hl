@@ -69,16 +69,28 @@
 
 (defelem dialog
 	[{:keys [open?]} dialog-contents]
-	(div :class (cell= {:dialog true :anim-hidden (not open?)})
-			 (div :class "curtain"
-						:click #(reset! open? nil))))
+	(div :class (cell= {:dialog true
+											:anim-hidden (not open?)
+											:curtained true})
+			 :click #(reset! open? nil)
+			 (div :class (cell= {:dialog-contents true :anim-hidden (not open?)})
+						:click (fn [ev]
+										 (.stopPropagation ev))
+						dialog-contents)))
 
 (html
  (head
 	(link :href "https://fonts.googleapis.com/css?family=Raleway:400,300,700" :rel "stylesheet")
 	(link :href "css/main.css" :rel "stylesheet"))
  (body
-	(dialog :open? selected-date)
+	(dialog :open? selected-date
+					(let [title (cell= (if selected-date (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))]
+						(div :class "panel"
+								 (div :class "toolbar"
+											(h1 :class "toolbar-item"
+													title))
+								 (div :class "panel-content"
+											(div "yo")))))
 	(let [current-view (cell :index)
 				selected-member (cell nil)]
 		(div :class "panel fill"
