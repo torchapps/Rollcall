@@ -69,7 +69,7 @@
 
 (defelem dialog
 	[{:keys [open?]} dialog-contents]
-	(div :class (cell= {:dialog true :hidden (not open?)})
+	(div :class (cell= {:dialog true :anim-hidden (not open?)})
 			 (div :class "curtain"
 						:click #(reset! open? nil))))
 
@@ -108,14 +108,15 @@
 												 term-length (cell= (:term-length selected-member))
 												 member-name (cell= (:full_name selected-member))]
 										 (div :class (cell= {:padded true :hidden (nil? selected-member)})
-													(h1 :class "member-name" member-name)
-													(div :class "info-group"
-															 (div :class "info"
-																		(div :class "value" (text "~{presence}"))
-																		(div :class "desc" "attendance"))
-															 (div :class "info"
-																		(div :class "value" (text "~{attendance} of ~{term-length}"))
-																		(div :class "desc" "sessions present in the roll call")))
+													(header
+													 (h1 :class "member-name" member-name)
+													 (div :class "info-group"
+																(div :class "info"
+																		 (div :class "value" (text "~{presence}"))
+																		 (div :class "desc" "attendance"))
+																(div :class "info"
+																		 (div :class "value" (text "~{attendance} of ~{term-length}"))
+																		 (div :class "desc" "sessions present in the roll call"))))
 													(div :class "dates-attended sessions"
 															 (loop-tpl :bindings [[year year-dates] dates-by-year]
 																				 (div :class "year"

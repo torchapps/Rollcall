@@ -65,19 +65,15 @@
 	 [:.minor {:flex 1}]
 	 [:.view+.view {:border-left "1px solid #eee"}]]
 
-	;; Calendar
-	[:.calendar
-	 [:.week-header {:font-weight "bold"}]
-	 [:.week {:display "flex"}]
-	 [:.first-week {:justify-content "flex-end"}]
-	 [:.day {:width (percent (/ 100 7))}]]
+	[:header {:padding-top (px 64)
+						:padding-bottom (px 64)}
+	 [:h1 {:margin-top 0}]]
 
 	[:.member-name {:font-weight 300
 									:text-align "center"}]
 
 	[:.info-group {:display "flex"
-								 :justify-content "center"
-								 :margin-bottom (px 64)}
+								 :justify-content "center"}
 	 [:.info {:text-align "center"}
 		[:.value {:margin-left 0
 							:font-weight "bold"
@@ -102,16 +98,18 @@
 						:color "#ccc"}]
 	 [:.present {:background-color accent
 							 :color light}]]
-
+	;; dialog
 	[:.dialog {:position "fixed"
 						 :top 0
 						 :left 0
 						 :right 0
 						 :bottom 0
-						 :z-index 10}
-	 [:&.hidden {:display "none"}]]
-	[:.curtain {:background-color "black"
-							:opacity 0.8
+						 :z-index 10
+						 :opacity 1
+						 :transition "opacity 0.3s"}
+	 [:&.anim-hidden {:pointer-events "none"
+										:opacity 0}]]
+	[:.curtain {:background-color "rgba(0,0,0,0.8)"
 							:position "absolute"
 							:top 0
 							:left 0
