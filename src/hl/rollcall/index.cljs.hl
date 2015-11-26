@@ -37,8 +37,18 @@
 (papa journals "journals.csv")
 (papa roll-call "roll_call.csv")
 
+(defc= id-member
+	(group-by (fn [m] (:id m)) members))
+
 (defc= id-attendance
 	(group-by (fn [d] (:member_id d)) roll-call))
+
+(defc= date-members
+	(group-by (fn [d] (:date d))
+						(mapv (fn [r]
+										(let [id (:member_id r)
+													member (first (get id-member id))]
+											(merge r {:member member}))) roll-call)))
 
 (defc= members-with-attendance
 	(mapv (fn [member]
@@ -73,7 +83,9 @@
 											:anim-hidden (not open?)
 											:curtained true})
 			 :click #(reset! open? nil)
-			 (div :class (cell= {:dialog-contents true :anim-hidden (not open?)})
+			 (div :class (cell= {:dialog-contents true
+													 :panel true
+													 :anim-hidden (not open?)})
 						:click (fn [ev]
 										 (.stopPropagation ev))
 						dialog-contents)))
@@ -83,14 +95,17 @@
 	(link :href "https://fonts.googleapis.com/css?family=Raleway:400,300,700" :rel "stylesheet")
 	(link :href "css/main.css" :rel "stylesheet"))
  (body
-	(dialog :open? selected-date
-					(let [title (cell= (if selected-date (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))]
-						(div :class "panel"
-								 (div :class "toolbar"
-											(h1 :class "toolbar-item"
-													title))
-								 (div :class "panel-content"
-											(div "yo")))))
+	(let [title (cell= (if selected-date (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))]
+		(dialog :open? selected-date
+						(div :class "toolbar"
+								 (h1 :class "toolbar-item"
+										 title))
+						(div :class "panel-content scrollable"
+								 (let [attendees (cell= (if selected-date
+																					(get date-members (tf/unparse date-formatter selected-date))))]
+									 (loop-tpl :bindings [attendee attendees]
+														 (let [attendee-name (cell= (:full_name (:member attendee)))]
+															 (div attendee-name)))))))
 	(let [current-view (cell :index)
 				selected-member (cell nil)]
 		(div :class "panel fill"

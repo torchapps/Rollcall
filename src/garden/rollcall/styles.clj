@@ -113,7 +113,8 @@
 						 :transition "opacity 0.3s"
 						 :display "flex"
 						 :justify-content "center"
-						 :align-items "center"}
+						 :align-items "center"
+						 :overflow-y "hidden"}
 	 [:&.anim-hidden {:pointer-events "none"
 										:opacity 0}]
 	 [:&.curtained {:background-color "rgba(0,0,0,0.8)"
@@ -123,6 +124,8 @@
 									:right 0
 									:bottom 0}]
 	 [:.dialog-contents {:width (px 320)
+											 :height (percent 80)
+											 :position "relative"
 											 :transition "transform 0.3s"}
 		[:&.anim-hidden {:pointer-events "none"
 										 :transform "translateY(64px)"}]]])
