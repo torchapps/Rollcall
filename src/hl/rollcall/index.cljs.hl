@@ -90,8 +90,7 @@
 			 (div :class (cell= {:dialog-contents true
 													 :panel true
 													 :anim-hidden (not open?)})
-						:click (fn [ev]
-										 (.stopImmediatePropagation ev))
+						:click #(.stopImmediatePropagation %)
 						dialog-contents)))
 
 (html
@@ -155,23 +154,14 @@
 				attendees (cell= (if selected-date
 													 (mapv :member
 																 (get date-members (tf/unparse date-formatter selected-date)))
-													 members))] ;; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
-		(div :class (cell= {:dialog true
-												:anim-hidden (not selected-date)
-												:curtained true})
-				 :click #(reset! selected-date nil)
-				 (div :class (cell= {:dialog-contents true
-														 :panel true
-														 :anim-hidden (not selected-date)})
-							:click #(.stopImmediatePropagation %)
-							(div :class "toolbar"
-									 (h1 :class "toolbar-item" title))
-							(ul :class "panel-content scrollable list-view"
-									(loop-tpl :bindings [attendee attendees]
-														(let [attendee-name (cell= (:full_name attendee))]
-															(li :click #(do
-																						(reset! selected-member @attendee)
-																						(reset! selected-date nil))
-																	attendee-name))))))
-		#_(dialog :open? selected-date
-							))))
+													 (range 400)))] ;; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
+		(dialog :open? selected-date
+						(div :class "toolbar"
+								 (h1 :class "toolbar-item" title))
+						(ul :class "panel-content scrollable list-view"
+								(loop-tpl :bindings [attendee attendees]
+													(let [attendee-name (cell= (:full_name attendee))]
+														(li :click #(do
+																					(reset! selected-member @attendee)
+																					(reset! selected-date nil))
+																attendee-name))))))))
