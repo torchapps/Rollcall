@@ -25,6 +25,7 @@
 
 (defc selected-date nil)
 (defc selected-member nil)
+(defc selected-sort :full_name)
 
 (defc members [])
 (defc journals [])
@@ -73,8 +74,9 @@
 
 
 (defelem toolbar-item
-	[_ children]
-	(div :class "toolbar-item"
+	[{:keys [click class]} children]
+	(div :class (cell= (merge class {:toolbar-item true}))
+			 :click click
 			 children))
 
 (defelem spacer
@@ -102,24 +104,33 @@
 
 	(let [current-view (cell :index)]
 		(div :class "panel fill"
-				 (div :class "toolbar"
+				 (div :class "toolbar main"
 							(h1 :class "toolbar-item" "Rollcall")
 							(spacer)
 							(toolbar-item "About our data")
 							(toolbar-item "About this site")
 							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
 				 (div :class "panel-content split-view"
-							(ul :class "minor view scrollable list-view"
-									(loop-tpl :bindings [member members-with-attendance]
-														(let [id (cell= (:id member))
-																	selected-id (cell= (:id selected-member))
-																	full-name (cell= (:full_name member))]
-															(li :class (cell= {:testing true
-																								 :selected (= selected-id id)})
-																	:click #(reset! selected-member @member)
-																	(div full-name)
-																	(spacer)
-																	(div (cell= (percent (:presence member))))))))
+							(div :class "minor view panel"
+									 (ul :class "panel-content scrollable list-view"
+											 (let [members (cell= (sort-by selected-sort members-with-attendance))]
+												 (loop-tpl :bindings [member members]
+																	 (let [id (cell= (:id member))
+																				 selected-id (cell= (:id selected-member))
+																				 full-name (cell= (:full_name member))]
+																		 (li :class (cell= {:testing true
+																												:selected (= selected-id id)})
+																				 :click #(reset! selected-member @member)
+																				 (div full-name)
+																				 (spacer)
+																				 (div (cell= (percent (:presence member)))))))))
+									 (div :class "toolbar sort-toolbar"
+												(toolbar-item :click #(reset! selected-sort :full_name)
+																			:class (cell= {:selected (= selected-sort :full_name)})
+																			"Alphabetical")
+												(toolbar-item :click #(reset! selected-sort :presence)
+																			:class (cell= {:selected (= selected-sort :presence)})
+																			"Attendance")))
 							(div :class "major view scrollable"
 									 (let [dates-attended (cell= (mapv #(tf/parse date-formatter %)
 																										 (:dates-attended selected-member)))

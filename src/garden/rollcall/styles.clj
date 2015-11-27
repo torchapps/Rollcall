@@ -41,14 +41,19 @@
 
 	;; Toolbar
 	[:.toolbar {:display "flex"
-							:background-color dark
-							:color "white"
+							:background-color light
+							:color dark
 							:height (px 64)
 							:padding-left (px 8)
 							:padding-right (px 8)
-							:align-items "center"}
+							:align-items "center"
+							:box-shadow "0px 0px 8px rgba(0,0,0,0.2)"}
+	 [:&.main {:background-color dark
+						 :color light}]
 	 [:.toolbar-item {:padding-left (px 8)
-										:padding-right (px 8)}]
+										:padding-right (px 8)
+										:cursor "pointer"}
+		[:&.selected {:color accent}]]
 	 [:h1 {:margin 0
 				 :font-size (px 16)
 				 :text-transform "uppercase"}]]
@@ -128,4 +133,9 @@
 											 :position "relative"
 											 :transition "transform 0.3s"}
 		[:&.anim-hidden {:pointer-events "none"
-										 :transform "translateY(64px)"}]]])
+										 :transform "translateY(64px)"}]]]
+
+	[:.sort-toolbar {:text-transform "uppercase"
+									 :font-size (px 12)
+									 :font-weight "bold"
+									 :justify-content "center"}])
