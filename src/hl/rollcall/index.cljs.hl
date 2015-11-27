@@ -5,7 +5,9 @@
 								[cljs-time.core :as t]
 								[cljs-time.format :as tf]))
 
-(.addEventListener js/window "resize" (fn [] (.log js/console "resized")))
+(enable-console-print!)
+
+#_(.addEventListener js/window "resize" (fn [] (.log js/console "resized")))
 
 (defn papa
 	[cell url]
@@ -22,6 +24,7 @@
 (defn percent [n] (str n "%"))
 
 (defc selected-date nil)
+(defc selected-member nil)
 
 (defc members [])
 (defc journals [])
@@ -29,7 +32,7 @@
 (defc roll-call [])
 
 (defc= dates-by-year
-	(group-by (fn [date] (t/year date))
+	(group-by t/year
 						(mapv #(tf/parse date-formatter (:date %))
 									dates)))
 
@@ -37,18 +40,8 @@
 (papa journals "journals.csv")
 (papa roll-call "roll_call.csv")
 
-(defc= id-member
-	(group-by (fn [m] (:id m)) members))
-
 (defc= id-attendance
-	(group-by (fn [d] (:member_id d)) roll-call))
-
-(defc= date-members
-	(group-by (fn [d] (:date d))
-						(mapv (fn [r]
-										(let [id (:member_id r)
-													member (first (get id-member id))]
-											(merge r {:member member}))) roll-call)))
+	(group-by :member_id roll-call))
 
 (defc= members-with-attendance
 	(mapv (fn [member]
@@ -67,6 +60,17 @@
 													 :term-length term-length
 													 :presence presence})))
 				members))
+
+(defc= id-member
+	(group-by :id members-with-attendance))
+
+(defc= date-members
+	(group-by (fn [d] (:date d))
+						(mapv (fn [r]
+										(let [id (:member_id r)
+													member (first (get id-member id))]
+											(merge r {:member member}))) roll-call)))
+
 
 (defelem toolbar-item
 	[_ children]
@@ -87,27 +91,17 @@
 													 :panel true
 													 :anim-hidden (not open?)})
 						:click (fn [ev]
-										 (.stopPropagation ev))
+										 (.stopImmediatePropagation ev))
 						dialog-contents)))
 
 (html
  (head
 	(link :href "https://fonts.googleapis.com/css?family=Raleway:400,300,700" :rel "stylesheet")
 	(link :href "css/main.css" :rel "stylesheet"))
+
  (body
-	(let [title (cell= (if selected-date (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))]
-		(dialog :open? selected-date
-						(div :class "toolbar"
-								 (h1 :class "toolbar-item"
-										 title))
-						(div :class "panel-content scrollable"
-								 (let [attendees (cell= (if selected-date
-																					(get date-members (tf/unparse date-formatter selected-date))))]
-									 (loop-tpl :bindings [attendee attendees]
-														 (let [attendee-name (cell= (:full_name (:member attendee)))]
-															 (div attendee-name)))))))
-	(let [current-view (cell :index)
-				selected-member (cell nil)]
+
+	(let [current-view (cell :index)]
 		(div :class "panel fill"
 				 (div :class "toolbar"
 							(h1 :class "toolbar-item" "Rollcall")
@@ -154,4 +148,30 @@
 																																	 was-present? (cell= (some #(t/= % date) dates-attended))]
 																															 (div :class (cell= {:date true :present was-present?})
 																																		:click #(reset! selected-date @date)
-																																		formatted-date)))))))))))))))
+																																		formatted-date)))))))))))))
+
+	(let [title (cell= (if selected-date
+											 (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))
+				attendees (cell= (if selected-date
+													 (mapv :member
+																 (get date-members (tf/unparse date-formatter selected-date)))
+													 members))] ;; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
+		(div :class (cell= {:dialog true
+												:anim-hidden (not selected-date)
+												:curtained true})
+				 :click #(reset! selected-date nil)
+				 (div :class (cell= {:dialog-contents true
+														 :panel true
+														 :anim-hidden (not selected-date)})
+							:click #(.stopImmediatePropagation %)
+							(div :class "toolbar"
+									 (h1 :class "toolbar-item" title))
+							(ul :class "panel-content scrollable list-view"
+									(loop-tpl :bindings [attendee attendees]
+														(let [attendee-name (cell= (:full_name attendee))]
+															(li :click #(do
+																						(reset! selected-member @attendee)
+																						(reset! selected-date nil))
+																	attendee-name))))))
+		#_(dialog :open? selected-date
+							))))

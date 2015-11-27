@@ -35,7 +35,7 @@
 	 (notify)
 	 (hoplon)
 	 (reload)
-	 (cljs-repl)
+	 #_(cljs-repl)
 	 (cljs)
 	 (garden :styles-var 'rollcall.styles/base
 					 :output-to "css/main.css"
