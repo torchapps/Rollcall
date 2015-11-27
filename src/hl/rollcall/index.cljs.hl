@@ -167,7 +167,7 @@
 																 (get date-members (tf/unparse date-formatter selected-date)))
 													 (range 400)))] ;; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
 		(dialog :open? selected-date
-						(div :class "toolbar"
+						(div :class "toolbar date-toolbar"
 								 (h1 :class "toolbar-item" title))
 						(ul :class "panel-content scrollable list-view"
 								(loop-tpl :bindings [attendee attendees]

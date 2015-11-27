@@ -46,8 +46,7 @@
 							:height (px 64)
 							:padding-left (px 8)
 							:padding-right (px 8)
-							:align-items "center"
-							:box-shadow "0px 0px 8px rgba(0,0,0,0.2)"}
+							:align-items "center"}
 	 [:&.main {:background-color dark
 						 :color light}]
 	 [:.toolbar-item {:padding-left (px 8)
@@ -138,4 +137,7 @@
 	[:.sort-toolbar {:text-transform "uppercase"
 									 :font-size (px 12)
 									 :font-weight "bold"
-									 :justify-content "center"}])
+									 :justify-content "center"
+									 :border-top "1px solid #eee"}]
+
+	[:.date-toolbar {:border-bottom "1px solid #eee"}])
