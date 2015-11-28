@@ -18,6 +18,7 @@
 	[:.hidden {:display "none"}]
 	[:.padded {:padding (px 16)}]
 	[:a {:color accent}]
+	[:.border-bottom {:border-bottom "1px solid #eee"}]
 
 	[:.fill {:position "absolute"
 					 :top 0
@@ -53,6 +54,13 @@
 										:padding-right (px 8)
 										:cursor "pointer"}
 		[:&.selected {:color accent}]]
+	 [:.toolbar-icon {:width (px 44)
+										:height (px 44)
+										:display "inline-flex"
+										:justify-content "center"
+										:align-items "center"
+										:border-radius (percent 50)
+										:cursor "pointer"}]
 	 [:h1 {:margin 0
 				 :font-size (px 16)
 				 :text-transform "uppercase"}]]
@@ -77,14 +85,16 @@
 						:padding-bottom (px 64)}
 	 [:.member-name {:font-weight 300
 									 :text-align "center"
-									 :margin-top 0}]
-	 [:.info-group {:display "flex"
+									 :margin-top 0}]]
+
+	;; Info group
+	[:.info-group {:display "flex"
 									:justify-content "center"}
 		[:.info {:text-align "center"}
 		 [:.value {:margin-left 0
 							 :font-weight "bold"
 							 :font-size (px 24)}]
-		 [:&+.info {:margin-left (px 32)}]]]]
+		 [:&+.info {:margin-left (px 32)}]]]
 
 
 	;; Sessions

@@ -2,6 +2,7 @@
 			(:require [cljsjs.papaparse]
 								[rollcall.data :as data]
 								[goog.math :as math]
+								[goog.string :as gstring]
 								[cljs-time.core :as t]
 								[cljs-time.format :as tf]))
 
@@ -165,10 +166,26 @@
 				attendees (cell= (if selected-date
 													 (mapv :member
 																 (get date-members (tf/unparse date-formatter selected-date)))
-													 (range 400)))] ;; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
+													 (range 400)));; this is a weird workaround. Without this, only N li's will be clickable, where N is the length of whatever collection this is.
+				attendee-count (cell= (count attendees))
+				member-count (cell= (count members))
+				attendance-percent (cell= (* 100 (/ attendee-count member-count)))
+				formatted-attendance-percent (cell= (gstring/format "%.2f" attendance-percent))]
 		(dialog :open? selected-date
 						(div :class "toolbar date-toolbar"
-								 (h1 :class "toolbar-item" title))
+								 (h1 :class "toolbar-item" title)
+								 (spacer)
+								 (div :class "toolbar-icon" :css {:font-size "18px"}
+											:click #(reset! selected-date nil)
+											"\u2715"))
+						(div :class "padded border-bottom"
+								 (div :class "info-group"
+											(div :class "info"
+													 (div :class "value" (text "~{formatted-attendance-percent}%"))
+													 (div :class "desc" "attendance"))
+											(div :class "info"
+													 (div :class "value" (text "~{member-count}"))
+													 (div :class "desc" "present"))))
 						(ul :class "panel-content scrollable list-view"
 								(loop-tpl :bindings [attendee attendees]
 													(let [attendee-name (cell= (:full_name attendee))]
