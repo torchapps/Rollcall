@@ -24,8 +24,12 @@
 
 (defn percent [n] (str n "%"))
 
+;; dialogs
 (defc show-date-dialog false)
+(defc show-about-data-dialog false)
+(defc show-about-site-dialog false)
 
+;; selection state
 (defc selected-date nil)
 (defc selected-member nil)
 (defc selected-sort :full_name)
@@ -87,11 +91,11 @@
 	(div :class "spacer"))
 
 (defelem dialog
-	[{:keys [open?]} dialog-contents]
+	[{:keys [open? close]} dialog-contents]
 	(div :class (cell= {:dialog true
 											:anim-hidden (not open?)
 											:curtained true})
-			 :click #(reset! open? nil)
+			 :click close
 			 (div :class (cell= {:dialog-contents true
 													 :panel true
 													 :anim-hidden (not open?)})
@@ -174,13 +178,15 @@
 				attendee-count (cell= (count attendees))
 				member-count (cell= (count members))
 				attendance-percent (cell= (* 100 (/ attendee-count member-count)))
-				formatted-attendance-percent (cell= (gstring/format "%.2f" attendance-percent))]
+				formatted-attendance-percent (cell= (gstring/format "%.2f" attendance-percent))
+				close-date-dialog #(swap! show-date-dialog not)]
 		(dialog :open? show-date-dialog
+						:close close-date-dialog
 						(div :class "toolbar date-toolbar"
 								 (h1 :class "toolbar-item" title)
 								 (spacer)
 								 (div :class "toolbar-icon" :css {:font-size "18px"}
-											:click #(swap! show-date-dialog not)
+											:click close-date-dialog
 											"\u2715"))
 						(div :class "padded border-bottom"
 								 (div :class "info-group"
@@ -195,5 +201,12 @@
 													(let [attendee-name (cell= (:full_name attendee))]
 														(li :click #(do
 																					(reset! selected-member @attendee)
-																					(swap! show-date-dialog not))
-																attendee-name))))))))
+																					(close-date-dialog))
+																attendee-name)))))
+		#_(let [a 2]
+			(dialog :open? show-about-data-dialog
+							(div :class "toolbar"
+									 (h1 :class "toolbar-item"
+											 "About our data")
+									 (spacer)
+									 ))))))
