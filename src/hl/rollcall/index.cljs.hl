@@ -32,11 +32,6 @@
 	[dialog]
 	(swap! dialog not))
 
-;; selection state
-(defc selected-date nil)
-(defc selected-member nil)
-(defc selected-sort :full_name)
-
 (defc members [])
 (defc journals [])
 (defc= dates data/dates)
@@ -48,7 +43,6 @@
 									dates)))
 
 (papa members "members.csv")
-(papa journals "journals.csv")
 (papa roll-call "roll_call.csv")
 
 (defc= id-attendance
@@ -82,6 +76,17 @@
 													member (first (get id-member id))]
 											(merge r {:member member}))) roll-call)))
 
+;; selection state
+(defc selected-date nil)
+(defc selected-member nil)
+(defc selected-sort :full_name)
+
+(add-watch members-with-attendance
+					 :first-member-selection-watch
+					 (fn [watch-key watch-ref old-state new-state]
+						 (reset! selected-member (first new-state))))
+
+;; components
 
 (defelem toolbar-item
 	[{:keys [click class]} children]
@@ -140,13 +145,13 @@
 												(toolbar-item :click #(reset! selected-sort :presence)
 																			:class (cell= {:selected (= selected-sort :presence)})
 																			"Attendance")))
-							(div :class "major view scrollable"
-									 (let [dates-attended (cell= (mapv #(tf/parse date-formatter %)
-																										 (:dates-attended selected-member)))
-												 presence (cell= (percent (:presence selected-member)))
-												 attendance (cell= (count dates-attended))
-												 term-length (cell= (:term-length selected-member))
-												 member-name (cell= (:full_name selected-member))]
+							(let [dates-attended (cell= (mapv #(tf/parse date-formatter %)
+																								(:dates-attended selected-member)))
+										presence (cell= (percent (:presence selected-member)))
+										attendance (cell= (count dates-attended))
+										term-length (cell= (:term-length selected-member))
+										member-name (cell= (:full_name selected-member))]
+								(div :class "major view scrollable"
 										 (div :class (cell= {:padded true :hidden (nil? selected-member)})
 													(header
 													 (h1 :class "member-name" member-name)
