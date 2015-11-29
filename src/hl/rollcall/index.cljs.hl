@@ -213,11 +213,11 @@
 								(loop-tpl :bindings [attendee attendees]
 													(let [attendee-name (cell= (:full_name attendee))
 																attendee-id (cell= (:id attendee))]
-														(li :click #(let [member-list (.getElementById js/document "member-list")
-																							member-list-item (.getElementById js/document (str "member" @attendee-id))
-																							mli-top (.-offsetTop member-list-item)]
+														(li :click #(let [member-list (js/jQuery "#member-list")
+																							member-list-item (js/jQuery (str "#member" @attendee-id))
+																							mli-top (.-top (.offset member-list-item))]
 																					(reset! selected-member @attendee)
-																					(set! (.-scrollTop member-list) (- mli-top 64))
+																					(.animate member-list #js {:scrollTop (- mli-top 64)})
 																					(close-date-dialog))
 																attendee-name))))))
 
