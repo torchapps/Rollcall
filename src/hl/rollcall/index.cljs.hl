@@ -217,7 +217,7 @@
 																							member-list-item (.getElementById js/document (str "member" @attendee-id))
 																							mli-top (.-offsetTop member-list-item)]
 																					(reset! selected-member @attendee)
-																					(set! (.-scrollTop member-list) (- mli-top 64))
+																					(aset member-list "scrollTop" (- mli-top 64))
 																					(close-date-dialog))
 																attendee-name))))))
 
