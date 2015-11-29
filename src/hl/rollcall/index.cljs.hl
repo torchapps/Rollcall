@@ -26,8 +26,12 @@
 
 ;; dialogs
 (defc show-date-dialog false)
-(defc show-about-data-dialog false)
-(defc show-about-site-dialog false)
+(defc show-about-dialog false)
+(defc show-donate-dialog false)
+
+(defn toggle-dialog
+	[dialog]
+	(swap! dialog not))
 
 ;; selection state
 (defc selected-date nil)
@@ -114,8 +118,8 @@
 				 (div :class "toolbar main"
 							(h1 :class "toolbar-item" "Rollcall")
 							(spacer)
-							(toolbar-item "About our data")
-							(toolbar-item "About this site")
+							(toolbar-item :click #(toggle-dialog show-about-dialog) "About")
+							(toolbar-item :click #(toggle-dialog show-donate-dialog) "Donate")
 							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
 				 (div :class "panel-content split-view"
 							(div :class "minor view panel"
@@ -155,7 +159,7 @@
 																(div :class "info"
 																		 (div :class "value" (text "~{attendance} of ~{term-length}"))
 																		 (div :class "desc" "sessions present in the roll call"))))
-													(div :class "dates-attended sessions"
+													(div :class "sessions"
 															 (loop-tpl :bindings [[year year-dates] dates-by-year]
 																				 (div :class "year"
 																							(h3 :class "year-header" year)
@@ -169,6 +173,7 @@
 																																							(swap! show-date-dialog not))
 																																		formatted-date)))))))))))))
 
+	;; Session data dialog
 	(let [title (cell= (if selected-date
 											 (tf/unparse (tf/formatter "MMM d, YYYY") selected-date)))
 				attendees (cell= (if selected-date
@@ -179,7 +184,7 @@
 				member-count (cell= (count members))
 				attendance-percent (cell= (* 100 (/ attendee-count member-count)))
 				formatted-attendance-percent (cell= (gstring/format "%.2f" attendance-percent))
-				close-date-dialog #(swap! show-date-dialog not)]
+				close-date-dialog #(toggle-dialog show-date-dialog)]
 		(dialog :open? show-date-dialog
 						:close close-date-dialog
 						(div :class "toolbar date-toolbar"
@@ -202,11 +207,20 @@
 														(li :click #(do
 																					(reset! selected-member @attendee)
 																					(close-date-dialog))
-																attendee-name)))))
-		#_(let [a 2]
-			(dialog :open? show-about-data-dialog
-							(div :class "toolbar"
-									 (h1 :class "toolbar-item"
-											 "About our data")
-									 (spacer)
-									 ))))))
+																attendee-name))))))
+
+	;; About our data dialog
+	(let [close-about-dialog #(toggle-dialog show-about-dialog)]
+		(dialog :open? show-about-dialog
+						:close close-about-dialog
+						(div :class "toolbar"
+								 (h1 :class "toolbar-item"
+										 "About")
+								 (spacer))))
+
+	(let [close-donate-dialog #(toggle-dialog show-donate-dialog)]
+		(dialog :open? show-donate-dialog
+						:close close-donate-dialog
+						(div :class "toolbar"
+								 (h1 :class "toolbar-item"
+										 "Donate"))))))

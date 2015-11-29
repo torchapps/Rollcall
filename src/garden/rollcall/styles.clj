@@ -104,7 +104,11 @@
 	 [:.year {:margin-bottom (px 64)}
 		[:.year-header {:margin-top (px 8)}]]
 	 [:.dates {:display "flex"
-						 :flex-wrap "wrap"}]
+						 :flex-wrap "wrap"
+						 :margin-top 0
+						 :margin-bottom 0
+						 :margin-left (px -4)
+						 :margin-right (px -4)}]
 	 [:.date {:width (px 64)
 						:height (px 64)
 						:font-size (px 10)
@@ -137,7 +141,8 @@
 									:left 0
 									:right 0
 									:bottom 0}]
-	 [:.dialog-contents {:width (px 320)
+	 [:.dialog-contents {:min-width (px 320)
+											 :width (percent 50)
 											 :height (percent 80)
 											 :position "relative"
 											 :transition "transform 0.3s"}
