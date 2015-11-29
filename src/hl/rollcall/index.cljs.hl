@@ -129,13 +129,14 @@
 								 (span :class "icon-torch")))
 				 (div :class "panel-content split-view"
 							(div :class "minor view panel"
-									 (ul :class "panel-content scrollable list-view"
+									 (ul :id "member-list" :class "panel-content scrollable list-view"
 											 (let [members (cell= (sort-by selected-sort members-with-attendance))]
 												 (loop-tpl :bindings [member members]
 																	 (let [id (cell= (:id member))
 																				 selected-id (cell= (:id selected-member))
 																				 full-name (cell= (:full_name member))]
-																		 (li :class (cell= {:testing true
+																		 (li :id (cell= (str "member" id))
+																				 :class (cell= {:testing true
 																												:selected (= selected-id id)})
 																				 :click #(reset! selected-member @member)
 																				 (div full-name)
@@ -210,9 +211,13 @@
 													 (div :class "desc" "present"))))
 						(ul :class "panel-content scrollable list-view"
 								(loop-tpl :bindings [attendee attendees]
-													(let [attendee-name (cell= (:full_name attendee))]
-														(li :click #(do
+													(let [attendee-name (cell= (:full_name attendee))
+																attendee-id (cell= (:id attendee))]
+														(li :click #(let [member-list (.getElementById js/document "member-list")
+																							member-list-item (.getElementById js/document (str "member" @attendee-id))
+																							mli-top (.-offsetTop member-list-item)]
 																					(reset! selected-member @attendee)
+																					(set! (.-scrollTop member-list) (- mli-top 64))
 																					(close-date-dialog))
 																attendee-name))))))
 
