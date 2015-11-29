@@ -151,6 +151,7 @@
 									:right 0
 									:bottom 0}]
 	 [:.dialog-contents {:min-width (px 320)
+											 :max-width (px 512)
 											 :width (percent 50)
 											 :height (percent 80)
 											 :position "relative"
