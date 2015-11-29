@@ -1,5 +1,4 @@
 /.boot
-/target
 /.nrepl-port
 /.repl-history
 .DS_Store
