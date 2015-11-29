@@ -57,4 +57,16 @@
 	(comp
 	 (hoplon)
 	 (cljs :optimizations :advanced)
+	 (garden :styles-var 'rollcall.styles/base
+					 :output-to "css/main.css"
+					 :vendors ["webkit" "moz"]
+					 :auto-prefix [:transition
+												 :transition-duration
+												 :transition-property
+												 :transform
+												 :align-items
+												 :justify-content
+												 :flex-direction
+												 :flex
+												 :user-select])
 	 (prerender)))
