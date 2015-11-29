@@ -122,10 +122,11 @@
 		(div :class "panel fill"
 				 (div :class "toolbar main"
 							(h1 :class "toolbar-item" "Rollcall")
-							(spacer)
 							(toolbar-item :click #(toggle-dialog show-about-dialog) "About our data")
+							(spacer)
 							(a :class "toolbar-item" :href "http://torchapps.github.io"
-								 (span :class "icon-torch toolbar-icon")))
+								 (div :css {:margin-right "8px"} "Built by Torch")
+								 (span :class "icon-torch")))
 				 (div :class "panel-content split-view"
 							(div :class "minor view panel"
 									 (ul :class "panel-content scrollable list-view"
