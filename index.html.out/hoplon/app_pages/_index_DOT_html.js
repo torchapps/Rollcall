@@ -235,480 +235,481 @@ return hoplon$app_pages$_index_DOT_html$dialog;
 hoplon.core.html.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([(function (){var G__12619 = (hoplon.core.link.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.link.cljs$core$IFn$_invoke$arity$4(cljs.core.cst$kw$href,"https://fonts.googleapis.com/css?family=Raleway:400,300,700",cljs.core.cst$kw$rel,"stylesheet") : hoplon.core.link.call(null,cljs.core.cst$kw$href,"https://fonts.googleapis.com/css?family=Raleway:400,300,700",cljs.core.cst$kw$rel,"stylesheet"));
 var G__12620 = (hoplon.core.link.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.link.cljs$core$IFn$_invoke$arity$4(cljs.core.cst$kw$href,"css/main.css",cljs.core.cst$kw$rel,"stylesheet") : hoplon.core.link.call(null,cljs.core.cst$kw$href,"css/main.css",cljs.core.cst$kw$rel,"stylesheet"));
 var G__12621 = (hoplon.core.link.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.link.cljs$core$IFn$_invoke$arity$4(cljs.core.cst$kw$href,"style.css",cljs.core.cst$kw$rel,"stylesheet") : hoplon.core.link.call(null,cljs.core.cst$kw$href,"style.css",cljs.core.cst$kw$rel,"stylesheet"));
-return (hoplon.core.head.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.head.cljs$core$IFn$_invoke$arity$3(G__12619,G__12620,G__12621) : hoplon.core.head.call(null,G__12619,G__12620,G__12621));
-})(),(function (){var G__13324 = (function (){var current_view = javelin.core.cell.cljs$core$IFn$_invoke$arity$1(cljs.core.cst$kw$index);
-var G__13345 = cljs.core.cst$kw$class;
-var G__13346 = "panel fill";
-var G__13347 = (function (){var G__13349 = cljs.core.cst$kw$class;
-var G__13350 = "toolbar main";
-var G__13351 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item","Rollcall") : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item","Rollcall"));
-var G__13352 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13349,G__13350,G__13351,G__13345,G__13346,current_view){
+var G__12622 = (hoplon.core.title.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.title.cljs$core$IFn$_invoke$arity$1("Rollcall") : hoplon.core.title.call(null,"Rollcall"));
+return (hoplon.core.head.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.head.cljs$core$IFn$_invoke$arity$4(G__12619,G__12620,G__12621,G__12622) : hoplon.core.head.call(null,G__12619,G__12620,G__12621,G__12622));
+})(),(function (){var G__13325 = (function (){var current_view = javelin.core.cell.cljs$core$IFn$_invoke$arity$1(cljs.core.cst$kw$index);
+var G__13346 = cljs.core.cst$kw$class;
+var G__13347 = "panel fill";
+var G__13348 = (function (){var G__13350 = cljs.core.cst$kw$class;
+var G__13351 = "toolbar main";
+var G__13352 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item","Rollcall") : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item","Rollcall"));
+var G__13353 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13350,G__13351,G__13352,G__13346,G__13347,current_view){
 return (function (){
 return hoplon.app_pages._index_DOT_html.toggle_dialog(hoplon.app_pages._index_DOT_html.show_about_dialog);
-});})(G__13349,G__13350,G__13351,G__13345,G__13346,current_view))
+});})(G__13350,G__13351,G__13352,G__13346,G__13347,current_view))
 ,"About our data"], 0));
-var G__13353 = hoplon.app_pages._index_DOT_html.spacer();
-var G__13354 = (function (){var G__13358 = cljs.core.cst$kw$class;
-var G__13359 = "toolbar-item";
-var G__13360 = cljs.core.cst$kw$href;
-var G__13361 = "http://torchapps.github.io";
-var G__13362 = (function (){var G__13364 = cljs.core.cst$kw$css;
-var G__13365 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$margin_DASH_right,"8px"], null);
-var G__13366 = "Built by Torch";
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13364,G__13365,G__13366) : hoplon.core.div.call(null,G__13364,G__13365,G__13366));
+var G__13354 = hoplon.app_pages._index_DOT_html.spacer();
+var G__13355 = (function (){var G__13359 = cljs.core.cst$kw$class;
+var G__13360 = "toolbar-item";
+var G__13361 = cljs.core.cst$kw$href;
+var G__13362 = "http://torchapps.github.io";
+var G__13363 = (function (){var G__13365 = cljs.core.cst$kw$css;
+var G__13366 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$margin_DASH_right,"8px"], null);
+var G__13367 = "Built by Torch";
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13365,G__13366,G__13367) : hoplon.core.div.call(null,G__13365,G__13366,G__13367));
 })();
-var G__13363 = (hoplon.core.span.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.span.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$class,"icon-torch") : hoplon.core.span.call(null,cljs.core.cst$kw$class,"icon-torch"));
-return (hoplon.core.a.cljs$core$IFn$_invoke$arity$6 ? hoplon.core.a.cljs$core$IFn$_invoke$arity$6(G__13358,G__13359,G__13360,G__13361,G__13362,G__13363) : hoplon.core.a.call(null,G__13358,G__13359,G__13360,G__13361,G__13362,G__13363));
+var G__13364 = (hoplon.core.span.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.span.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$class,"icon-torch") : hoplon.core.span.call(null,cljs.core.cst$kw$class,"icon-torch"));
+return (hoplon.core.a.cljs$core$IFn$_invoke$arity$6 ? hoplon.core.a.cljs$core$IFn$_invoke$arity$6(G__13359,G__13360,G__13361,G__13362,G__13363,G__13364) : hoplon.core.a.call(null,G__13359,G__13360,G__13361,G__13362,G__13363,G__13364));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$6 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$6(G__13349,G__13350,G__13351,G__13352,G__13353,G__13354) : hoplon.core.div.call(null,G__13349,G__13350,G__13351,G__13352,G__13353,G__13354));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$6 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$6(G__13350,G__13351,G__13352,G__13353,G__13354,G__13355) : hoplon.core.div.call(null,G__13350,G__13351,G__13352,G__13353,G__13354,G__13355));
 })();
-var G__13348 = (function (){var G__13511 = cljs.core.cst$kw$class;
-var G__13512 = "panel-content split-view";
-var G__13513 = (function (){var G__13580 = cljs.core.cst$kw$class;
-var G__13581 = "minor view panel";
-var G__13582 = (function (){var G__13614 = cljs.core.cst$kw$id;
-var G__13615 = "member-list";
-var G__13616 = cljs.core.cst$kw$class;
-var G__13617 = "panel-content scrollable list-view";
-var G__13618 = (function (){var members = javelin.core.formula(((function (G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13619,G__13621,G__13620){
-return (G__13619.cljs$core$IFn$_invoke$arity$2 ? G__13619.cljs$core$IFn$_invoke$arity$2(G__13620,G__13621) : G__13619.call(null,G__13620,G__13621));
-});})(G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+var G__13349 = (function (){var G__13512 = cljs.core.cst$kw$class;
+var G__13513 = "panel-content split-view";
+var G__13514 = (function (){var G__13581 = cljs.core.cst$kw$class;
+var G__13582 = "minor view panel";
+var G__13583 = (function (){var G__13615 = cljs.core.cst$kw$id;
+var G__13616 = "member-list";
+var G__13617 = cljs.core.cst$kw$class;
+var G__13618 = "panel-content scrollable list-view";
+var G__13619 = (function (){var members = javelin.core.formula(((function (G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13620,G__13622,G__13621){
+return (G__13620.cljs$core$IFn$_invoke$arity$2 ? G__13620.cljs$core$IFn$_invoke$arity$2(G__13621,G__13622) : G__13620.call(null,G__13621,G__13622));
+});})(G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs.core.sort_by,hoplon.app_pages._index_DOT_html.members_with_attendance,hoplon.app_pages._index_DOT_html.selected_sort);
-return hoplon.core.loop_tpl_STAR_(members,((function (members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+return hoplon.core.loop_tpl_STAR_(members,((function (members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (item__11816__auto__){
-var vec__13622 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+var vec__13623 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (member){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [member], null);
-});})(members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+});})(members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,item__11816__auto__));
-var member = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13622,(0),null);
-var id = javelin.core.formula(((function (vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13623){
-return cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(G__13623);
-});})(vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
-).call(null,member);
-var selected_id = javelin.core.formula(((function (id,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+var member = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13623,(0),null);
+var id = javelin.core.formula(((function (vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (G__13624){
 return cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(G__13624);
-});})(id,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
-).call(null,hoplon.app_pages._index_DOT_html.selected_member);
-var full_name = javelin.core.formula(((function (id,selected_id,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13625){
-return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__13625);
-});})(id,selected_id,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+});})(vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,member);
-var G__13627 = cljs.core.cst$kw$id;
-var G__13628 = javelin.core.formula(((function (G__13627,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13636){
-return [cljs.core.str("member"),cljs.core.str(G__13636)].join('');
-});})(G__13627,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+var selected_id = javelin.core.formula(((function (id,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13625){
+return cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(G__13625);
+});})(id,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
+).call(null,hoplon.app_pages._index_DOT_html.selected_member);
+var full_name = javelin.core.formula(((function (id,selected_id,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13626){
+return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__13626);
+});})(id,selected_id,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
+).call(null,member);
+var G__13628 = cljs.core.cst$kw$id;
+var G__13629 = javelin.core.formula(((function (G__13628,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13637){
+return [cljs.core.str("member"),cljs.core.str(G__13637)].join('');
+});})(G__13628,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,id);
-var G__13629 = cljs.core.cst$kw$class;
-var G__13630 = javelin.core.formula(((function (G__13627,G__13628,G__13629,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13637,G__13638,G__13639){
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$testing,true,cljs.core.cst$kw$selected,(G__13637.cljs$core$IFn$_invoke$arity$2 ? G__13637.cljs$core$IFn$_invoke$arity$2(G__13638,G__13639) : G__13637.call(null,G__13638,G__13639))], null);
-});})(G__13627,G__13628,G__13629,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+var G__13630 = cljs.core.cst$kw$class;
+var G__13631 = javelin.core.formula(((function (G__13628,G__13629,G__13630,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13638,G__13639,G__13640){
+return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$testing,true,cljs.core.cst$kw$selected,(G__13638.cljs$core$IFn$_invoke$arity$2 ? G__13638.cljs$core$IFn$_invoke$arity$2(G__13639,G__13640) : G__13638.call(null,G__13639,G__13640))], null);
+});})(G__13628,G__13629,G__13630,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs.core._EQ_,selected_id,id);
-var G__13631 = cljs.core.cst$kw$click;
-var G__13632 = ((function (G__13627,G__13628,G__13629,G__13630,G__13631,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+var G__13632 = cljs.core.cst$kw$click;
+var G__13633 = ((function (G__13628,G__13629,G__13630,G__13631,G__13632,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (){
-var G__13640 = hoplon.app_pages._index_DOT_html.selected_member;
-var G__13641 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(member) : cljs.core.deref.call(null,member));
-return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__13640,G__13641) : cljs.core.reset_BANG_.call(null,G__13640,G__13641));
-});})(G__13627,G__13628,G__13629,G__13630,G__13631,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+var G__13641 = hoplon.app_pages._index_DOT_html.selected_member;
+var G__13642 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(member) : cljs.core.deref.call(null,member));
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__13641,G__13642) : cljs.core.reset_BANG_.call(null,G__13641,G__13642));
+});})(G__13628,G__13629,G__13630,G__13631,G__13632,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ;
-var G__13633 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$1(full_name) : hoplon.core.div.call(null,full_name));
-var G__13634 = hoplon.app_pages._index_DOT_html.spacer();
-var G__13635 = (function (){var G__13645 = javelin.core.formula(((function (G__13627,G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13646,G__13647){
-var G__13648 = cljs.core.cst$kw$presence.cljs$core$IFn$_invoke$arity$1(G__13647);
-return (G__13646.cljs$core$IFn$_invoke$arity$1 ? G__13646.cljs$core$IFn$_invoke$arity$1(G__13648) : G__13646.call(null,G__13648));
-});})(G__13627,G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,id,selected_id,full_name,vec__13622,member,members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+var G__13634 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$1(full_name) : hoplon.core.div.call(null,full_name));
+var G__13635 = hoplon.app_pages._index_DOT_html.spacer();
+var G__13636 = (function (){var G__13646 = javelin.core.formula(((function (G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13647,G__13648){
+var G__13649 = cljs.core.cst$kw$presence.cljs$core$IFn$_invoke$arity$1(G__13648);
+return (G__13647.cljs$core$IFn$_invoke$arity$1 ? G__13647.cljs$core$IFn$_invoke$arity$1(G__13649) : G__13647.call(null,G__13649));
+});})(G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635,id,selected_id,full_name,vec__13623,member,members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,hoplon.app_pages._index_DOT_html.percent,member);
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$1(G__13645) : hoplon.core.div.call(null,G__13645));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$1(G__13646) : hoplon.core.div.call(null,G__13646));
 })();
-return (hoplon.core.li.cljs$core$IFn$_invoke$arity$9 ? hoplon.core.li.cljs$core$IFn$_invoke$arity$9(G__13627,G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635) : hoplon.core.li.call(null,G__13627,G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635));
-});})(members,G__13614,G__13615,G__13616,G__13617,G__13580,G__13581,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+return (hoplon.core.li.cljs$core$IFn$_invoke$arity$9 ? hoplon.core.li.cljs$core$IFn$_invoke$arity$9(G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635,G__13636) : hoplon.core.li.call(null,G__13628,G__13629,G__13630,G__13631,G__13632,G__13633,G__13634,G__13635,G__13636));
+});})(members,G__13615,G__13616,G__13617,G__13618,G__13581,G__13582,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 );
 })();
-return (hoplon.core.ul.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.ul.cljs$core$IFn$_invoke$arity$5(G__13614,G__13615,G__13616,G__13617,G__13618) : hoplon.core.ul.call(null,G__13614,G__13615,G__13616,G__13617,G__13618));
+return (hoplon.core.ul.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.ul.cljs$core$IFn$_invoke$arity$5(G__13615,G__13616,G__13617,G__13618,G__13619) : hoplon.core.ul.call(null,G__13615,G__13616,G__13617,G__13618,G__13619));
 })();
-var G__13583 = (function (){var G__13651 = cljs.core.cst$kw$class;
-var G__13652 = "toolbar sort-toolbar";
-var G__13653 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13651,G__13652,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+var G__13584 = (function (){var G__13652 = cljs.core.cst$kw$class;
+var G__13653 = "toolbar sort-toolbar";
+var G__13654 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13652,G__13653,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (){
 return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(hoplon.app_pages._index_DOT_html.selected_sort,cljs.core.cst$kw$full_name) : cljs.core.reset_BANG_.call(null,hoplon.app_pages._index_DOT_html.selected_sort,cljs.core.cst$kw$full_name));
-});})(G__13651,G__13652,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
-,cljs.core.cst$kw$class,javelin.core.formula(((function (G__13651,G__13652,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13655,G__13656){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$selected,(G__13655.cljs$core$IFn$_invoke$arity$2 ? G__13655.cljs$core$IFn$_invoke$arity$2(G__13656,cljs.core.cst$kw$full_name) : G__13655.call(null,G__13656,cljs.core.cst$kw$full_name))], null);
-});})(G__13651,G__13652,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+});})(G__13652,G__13653,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
+,cljs.core.cst$kw$class,javelin.core.formula(((function (G__13652,G__13653,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13656,G__13657){
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$selected,(G__13656.cljs$core$IFn$_invoke$arity$2 ? G__13656.cljs$core$IFn$_invoke$arity$2(G__13657,cljs.core.cst$kw$full_name) : G__13656.call(null,G__13657,cljs.core.cst$kw$full_name))], null);
+});})(G__13652,G__13653,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs.core._EQ_,hoplon.app_pages._index_DOT_html.selected_sort),"Alphabetical"], 0));
-var G__13654 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13651,G__13652,G__13653,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
+var G__13655 = hoplon.app_pages._index_DOT_html.toolbar_item.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$click,((function (G__13652,G__13653,G__13654,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
 return (function (){
 return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(hoplon.app_pages._index_DOT_html.selected_sort,cljs.core.cst$kw$presence) : cljs.core.reset_BANG_.call(null,hoplon.app_pages._index_DOT_html.selected_sort,cljs.core.cst$kw$presence));
-});})(G__13651,G__13652,G__13653,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
-,cljs.core.cst$kw$class,javelin.core.formula(((function (G__13651,G__13652,G__13653,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view){
-return (function (G__13657,G__13658){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$selected,(G__13657.cljs$core$IFn$_invoke$arity$2 ? G__13657.cljs$core$IFn$_invoke$arity$2(G__13658,cljs.core.cst$kw$presence) : G__13657.call(null,G__13658,cljs.core.cst$kw$presence))], null);
-});})(G__13651,G__13652,G__13653,G__13580,G__13581,G__13582,G__13511,G__13512,G__13345,G__13346,G__13347,current_view))
+});})(G__13652,G__13653,G__13654,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
+,cljs.core.cst$kw$class,javelin.core.formula(((function (G__13652,G__13653,G__13654,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view){
+return (function (G__13658,G__13659){
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$selected,(G__13658.cljs$core$IFn$_invoke$arity$2 ? G__13658.cljs$core$IFn$_invoke$arity$2(G__13659,cljs.core.cst$kw$presence) : G__13658.call(null,G__13659,cljs.core.cst$kw$presence))], null);
+});})(G__13652,G__13653,G__13654,G__13581,G__13582,G__13583,G__13512,G__13513,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs.core._EQ_,hoplon.app_pages._index_DOT_html.selected_sort),"Attendance"], 0));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13651,G__13652,G__13653,G__13654) : hoplon.core.div.call(null,G__13651,G__13652,G__13653,G__13654));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13652,G__13653,G__13654,G__13655) : hoplon.core.div.call(null,G__13652,G__13653,G__13654,G__13655));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13580,G__13581,G__13582,G__13583) : hoplon.core.div.call(null,G__13580,G__13581,G__13582,G__13583));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13581,G__13582,G__13583,G__13584) : hoplon.core.div.call(null,G__13581,G__13582,G__13583,G__13584));
 })();
-var G__13514 = (function (){var dates_attended = javelin.core.formula(((function (G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13661,G__13660,G__13662,G__13659){
-var G__13663 = ((function (G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var G__13515 = (function (){var dates_attended = javelin.core.formula(((function (G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13662,G__13661,G__13663,G__13660){
+var G__13664 = ((function (G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (p1__12617_SHARP_){
-return (G__13660.cljs$core$IFn$_invoke$arity$2 ? G__13660.cljs$core$IFn$_invoke$arity$2(G__13661,p1__12617_SHARP_) : G__13660.call(null,G__13661,p1__12617_SHARP_));
-});})(G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+return (G__13661.cljs$core$IFn$_invoke$arity$2 ? G__13661.cljs$core$IFn$_invoke$arity$2(G__13662,p1__12617_SHARP_) : G__13661.call(null,G__13662,p1__12617_SHARP_));
+});})(G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ;
-var G__13664 = cljs.core.cst$kw$dates_DASH_attended.cljs$core$IFn$_invoke$arity$1(G__13662);
-return (G__13659.cljs$core$IFn$_invoke$arity$2 ? G__13659.cljs$core$IFn$_invoke$arity$2(G__13663,G__13664) : G__13659.call(null,G__13663,G__13664));
-});})(G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__13665 = cljs.core.cst$kw$dates_DASH_attended.cljs$core$IFn$_invoke$arity$1(G__13663);
+return (G__13660.cljs$core$IFn$_invoke$arity$2 ? G__13660.cljs$core$IFn$_invoke$arity$2(G__13664,G__13665) : G__13660.call(null,G__13664,G__13665));
+});})(G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,hoplon.app_pages._index_DOT_html.date_formatter,cljs_time.format.parse,hoplon.app_pages._index_DOT_html.selected_member,cljs.core.mapv);
-var presence = javelin.core.formula(((function (dates_attended,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13665,G__13666){
-var G__13667 = cljs.core.cst$kw$presence.cljs$core$IFn$_invoke$arity$1(G__13666);
-return (G__13665.cljs$core$IFn$_invoke$arity$1 ? G__13665.cljs$core$IFn$_invoke$arity$1(G__13667) : G__13665.call(null,G__13667));
-});})(dates_attended,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var presence = javelin.core.formula(((function (dates_attended,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13666,G__13667){
+var G__13668 = cljs.core.cst$kw$presence.cljs$core$IFn$_invoke$arity$1(G__13667);
+return (G__13666.cljs$core$IFn$_invoke$arity$1 ? G__13666.cljs$core$IFn$_invoke$arity$1(G__13668) : G__13666.call(null,G__13668));
+});})(dates_attended,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,hoplon.app_pages._index_DOT_html.percent,hoplon.app_pages._index_DOT_html.selected_member);
-var attendance = javelin.core.formula(((function (dates_attended,presence,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13668,G__13669){
-return (G__13668.cljs$core$IFn$_invoke$arity$1 ? G__13668.cljs$core$IFn$_invoke$arity$1(G__13669) : G__13668.call(null,G__13669));
-});})(dates_attended,presence,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var attendance = javelin.core.formula(((function (dates_attended,presence,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13669,G__13670){
+return (G__13669.cljs$core$IFn$_invoke$arity$1 ? G__13669.cljs$core$IFn$_invoke$arity$1(G__13670) : G__13669.call(null,G__13670));
+});})(dates_attended,presence,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs.core.count,dates_attended);
-var term_length = javelin.core.formula(((function (dates_attended,presence,attendance,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13670){
-return cljs.core.cst$kw$term_DASH_length.cljs$core$IFn$_invoke$arity$1(G__13670);
-});})(dates_attended,presence,attendance,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
-).call(null,hoplon.app_pages._index_DOT_html.selected_member);
-var member_name = javelin.core.formula(((function (dates_attended,presence,attendance,term_length,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var term_length = javelin.core.formula(((function (dates_attended,presence,attendance,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (G__13671){
-return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__13671);
-});})(dates_attended,presence,attendance,term_length,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+return cljs.core.cst$kw$term_DASH_length.cljs$core$IFn$_invoke$arity$1(G__13671);
+});})(dates_attended,presence,attendance,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,hoplon.app_pages._index_DOT_html.selected_member);
-var G__13849 = cljs.core.cst$kw$class;
-var G__13850 = "major view scrollable";
-var G__13851 = (function (){var G__13853 = cljs.core.cst$kw$class;
-var G__13854 = javelin.core.formula(((function (G__13853,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13857){
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$padded,true,cljs.core.cst$kw$hidden,(G__13857 == null)], null);
-});})(G__13853,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var member_name = javelin.core.formula(((function (dates_attended,presence,attendance,term_length,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13672){
+return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__13672);
+});})(dates_attended,presence,attendance,term_length,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,hoplon.app_pages._index_DOT_html.selected_member);
-var G__13855 = (function (){var G__13858 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"member-name",member_name) : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"member-name",member_name));
-var G__13859 = (function (){var G__13878 = cljs.core.cst$kw$class;
-var G__13879 = "info-group";
-var G__13880 = (function (){var G__13889 = cljs.core.cst$kw$class;
-var G__13890 = "info";
-var G__13891 = (function (){var G__13895 = cljs.core.cst$kw$class;
-var G__13896 = "value";
-var G__13897 = (function (){var t__11837__auto__ = document.createTextNode("");
-javelin.core.formula(((function (t__11837__auto__,G__13895,G__13896,G__13889,G__13890,G__13878,G__13879,G__13858,G__13853,G__13854,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13898,G__13899){
-return G__13898.nodeValue = [cljs.core.str(G__13899)].join('');
-});})(t__11837__auto__,G__13895,G__13896,G__13889,G__13890,G__13878,G__13879,G__13858,G__13853,G__13854,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__13850 = cljs.core.cst$kw$class;
+var G__13851 = "major view scrollable";
+var G__13852 = (function (){var G__13854 = cljs.core.cst$kw$class;
+var G__13855 = javelin.core.formula(((function (G__13854,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13858){
+return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$padded,true,cljs.core.cst$kw$hidden,(G__13858 == null)], null);
+});})(G__13854,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
+).call(null,hoplon.app_pages._index_DOT_html.selected_member);
+var G__13856 = (function (){var G__13859 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"member-name",member_name) : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"member-name",member_name));
+var G__13860 = (function (){var G__13879 = cljs.core.cst$kw$class;
+var G__13880 = "info-group";
+var G__13881 = (function (){var G__13890 = cljs.core.cst$kw$class;
+var G__13891 = "info";
+var G__13892 = (function (){var G__13896 = cljs.core.cst$kw$class;
+var G__13897 = "value";
+var G__13898 = (function (){var t__11837__auto__ = document.createTextNode("");
+javelin.core.formula(((function (t__11837__auto__,G__13896,G__13897,G__13890,G__13891,G__13879,G__13880,G__13859,G__13854,G__13855,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13899,G__13900){
+return G__13899.nodeValue = [cljs.core.str(G__13900)].join('');
+});})(t__11837__auto__,G__13896,G__13897,G__13890,G__13891,G__13879,G__13880,G__13859,G__13854,G__13855,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,t__11837__auto__,presence);
 
 return t__11837__auto__;
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13895,G__13896,G__13897) : hoplon.core.div.call(null,G__13895,G__13896,G__13897));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13896,G__13897,G__13898) : hoplon.core.div.call(null,G__13896,G__13897,G__13898));
 })();
-var G__13892 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","attendance") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","attendance"));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13889,G__13890,G__13891,G__13892) : hoplon.core.div.call(null,G__13889,G__13890,G__13891,G__13892));
+var G__13893 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","attendance") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","attendance"));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13890,G__13891,G__13892,G__13893) : hoplon.core.div.call(null,G__13890,G__13891,G__13892,G__13893));
 })();
-var G__13881 = (function (){var G__13909 = cljs.core.cst$kw$class;
-var G__13910 = "info";
-var G__13911 = (function (){var G__13916 = cljs.core.cst$kw$class;
-var G__13917 = "value";
-var G__13918 = (function (){var t__11837__auto__ = document.createTextNode("");
-javelin.core.formula(((function (t__11837__auto__,G__13916,G__13917,G__13909,G__13910,G__13878,G__13879,G__13880,G__13858,G__13853,G__13854,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__13919,G__13920,G__13921){
-return G__13919.nodeValue = [cljs.core.str(G__13920),cljs.core.str(" of "),cljs.core.str(G__13921)].join('');
-});})(t__11837__auto__,G__13916,G__13917,G__13909,G__13910,G__13878,G__13879,G__13880,G__13858,G__13853,G__13854,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__13882 = (function (){var G__13910 = cljs.core.cst$kw$class;
+var G__13911 = "info";
+var G__13912 = (function (){var G__13917 = cljs.core.cst$kw$class;
+var G__13918 = "value";
+var G__13919 = (function (){var t__11837__auto__ = document.createTextNode("");
+javelin.core.formula(((function (t__11837__auto__,G__13917,G__13918,G__13910,G__13911,G__13879,G__13880,G__13881,G__13859,G__13854,G__13855,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__13920,G__13921,G__13922){
+return G__13920.nodeValue = [cljs.core.str(G__13921),cljs.core.str(" of "),cljs.core.str(G__13922)].join('');
+});})(t__11837__auto__,G__13917,G__13918,G__13910,G__13911,G__13879,G__13880,G__13881,G__13859,G__13854,G__13855,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,t__11837__auto__,attendance,term_length);
 
 return t__11837__auto__;
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13916,G__13917,G__13918) : hoplon.core.div.call(null,G__13916,G__13917,G__13918));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13917,G__13918,G__13919) : hoplon.core.div.call(null,G__13917,G__13918,G__13919));
 })();
-var G__13912 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","sessions present in the roll call") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","sessions present in the roll call"));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13909,G__13910,G__13911,G__13912) : hoplon.core.div.call(null,G__13909,G__13910,G__13911,G__13912));
+var G__13913 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","sessions present in the roll call") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","sessions present in the roll call"));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13910,G__13911,G__13912,G__13913) : hoplon.core.div.call(null,G__13910,G__13911,G__13912,G__13913));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13878,G__13879,G__13880,G__13881) : hoplon.core.div.call(null,G__13878,G__13879,G__13880,G__13881));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13879,G__13880,G__13881,G__13882) : hoplon.core.div.call(null,G__13879,G__13880,G__13881,G__13882));
 })();
-return (hoplon.core.header.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.header.cljs$core$IFn$_invoke$arity$2(G__13858,G__13859) : hoplon.core.header.call(null,G__13858,G__13859));
+return (hoplon.core.header.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.header.cljs$core$IFn$_invoke$arity$2(G__13859,G__13860) : hoplon.core.header.call(null,G__13859,G__13860));
 })();
-var G__13856 = (function (){var G__13974 = cljs.core.cst$kw$class;
-var G__13975 = "sessions";
-var G__13976 = hoplon.core.loop_tpl_STAR_(hoplon.app_pages._index_DOT_html.dates_by_year,((function (G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var G__13857 = (function (){var G__13975 = cljs.core.cst$kw$class;
+var G__13976 = "sessions";
+var G__13977 = hoplon.core.loop_tpl_STAR_(hoplon.app_pages._index_DOT_html.dates_by_year,((function (G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (item__11816__auto__){
-var vec__13977 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (p__13978){
-var vec__13979 = p__13978;
-var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13979,(0),null);
-var year_dates = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13979,(1),null);
+var vec__13978 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (p__13979){
+var vec__13980 = p__13979;
+var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13980,(0),null);
+var year_dates = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13980,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [year,year_dates], null);
-});})(G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+});})(G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,item__11816__auto__));
-var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13977,(0),null);
-var year_dates = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13977,(1),null);
-var G__13980 = cljs.core.cst$kw$class;
-var G__13981 = "year";
-var G__13982 = (hoplon.core.h3.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h3.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"year-header",year) : hoplon.core.h3.call(null,cljs.core.cst$kw$class,"year-header",year));
-var G__13983 = (function (){var G__14005 = cljs.core.cst$kw$class;
-var G__14006 = "dates";
-var G__14007 = hoplon.core.loop_tpl_STAR_(year_dates,((function (G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13978,(0),null);
+var year_dates = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13978,(1),null);
+var G__13981 = cljs.core.cst$kw$class;
+var G__13982 = "year";
+var G__13983 = (hoplon.core.h3.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h3.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"year-header",year) : hoplon.core.h3.call(null,cljs.core.cst$kw$class,"year-header",year));
+var G__13984 = (function (){var G__14006 = cljs.core.cst$kw$class;
+var G__14007 = "dates";
+var G__14008 = hoplon.core.loop_tpl_STAR_(year_dates,((function (G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (item__11816__auto____$1){
-var vec__14008 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var vec__14009 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (date){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [date], null);
-});})(G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+});})(G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,item__11816__auto____$1));
-var date = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14008,(0),null);
-var formatted_date = javelin.core.formula(((function (vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__14010,G__14011,G__14009){
-var G__14012 = (G__14010.cljs$core$IFn$_invoke$arity$1 ? G__14010.cljs$core$IFn$_invoke$arity$1("MMM d") : G__14010.call(null,"MMM d"));
-var G__14013 = G__14011;
-return (G__14009.cljs$core$IFn$_invoke$arity$2 ? G__14009.cljs$core$IFn$_invoke$arity$2(G__14012,G__14013) : G__14009.call(null,G__14012,G__14013));
-});})(vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var date = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14009,(0),null);
+var formatted_date = javelin.core.formula(((function (vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__14011,G__14012,G__14010){
+var G__14013 = (G__14011.cljs$core$IFn$_invoke$arity$1 ? G__14011.cljs$core$IFn$_invoke$arity$1("MMM d") : G__14011.call(null,"MMM d"));
+var G__14014 = G__14012;
+return (G__14010.cljs$core$IFn$_invoke$arity$2 ? G__14010.cljs$core$IFn$_invoke$arity$2(G__14013,G__14014) : G__14010.call(null,G__14013,G__14014));
+});})(vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,cljs_time.format.formatter,date,cljs_time.format.unparse);
-var was_present_QMARK_ = javelin.core.formula(((function (formatted_date,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__14016,G__14014,G__14017,G__14015){
-var G__14018 = ((function (formatted_date,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var was_present_QMARK_ = javelin.core.formula(((function (formatted_date,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__14017,G__14015,G__14018,G__14016){
+var G__14019 = ((function (formatted_date,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (p1__12618_SHARP_){
-return (G__14015.cljs$core$IFn$_invoke$arity$2 ? G__14015.cljs$core$IFn$_invoke$arity$2(p1__12618_SHARP_,G__14016) : G__14015.call(null,p1__12618_SHARP_,G__14016));
-});})(formatted_date,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+return (G__14016.cljs$core$IFn$_invoke$arity$2 ? G__14016.cljs$core$IFn$_invoke$arity$2(p1__12618_SHARP_,G__14017) : G__14016.call(null,p1__12618_SHARP_,G__14017));
+});})(formatted_date,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ;
-var G__14019 = G__14017;
-return (G__14014.cljs$core$IFn$_invoke$arity$2 ? G__14014.cljs$core$IFn$_invoke$arity$2(G__14018,G__14019) : G__14014.call(null,G__14018,G__14019));
-});})(formatted_date,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__14020 = G__14018;
+return (G__14015.cljs$core$IFn$_invoke$arity$2 ? G__14015.cljs$core$IFn$_invoke$arity$2(G__14019,G__14020) : G__14015.call(null,G__14019,G__14020));
+});})(formatted_date,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,date,cljs.core.some,dates_attended,cljs_time.core._EQ_);
-var G__14021 = cljs.core.cst$kw$class;
-var G__14022 = javelin.core.formula(((function (G__14021,formatted_date,was_present_QMARK_,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
-return (function (G__14026){
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$date,true,cljs.core.cst$kw$present,G__14026], null);
-});})(G__14021,formatted_date,was_present_QMARK_,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__14022 = cljs.core.cst$kw$class;
+var G__14023 = javelin.core.formula(((function (G__14022,formatted_date,was_present_QMARK_,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
+return (function (G__14027){
+return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$date,true,cljs.core.cst$kw$present,G__14027], null);
+});})(G__14022,formatted_date,was_present_QMARK_,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ).call(null,was_present_QMARK_);
-var G__14023 = cljs.core.cst$kw$click;
-var G__14024 = ((function (G__14021,G__14022,G__14023,formatted_date,was_present_QMARK_,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view){
+var G__14024 = cljs.core.cst$kw$click;
+var G__14025 = ((function (G__14022,G__14023,G__14024,formatted_date,was_present_QMARK_,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view){
 return (function (){
-var G__14027_14251 = hoplon.app_pages._index_DOT_html.selected_date;
-var G__14028_14252 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(date) : cljs.core.deref.call(null,date));
-(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14027_14251,G__14028_14252) : cljs.core.reset_BANG_.call(null,G__14027_14251,G__14028_14252));
+var G__14028_14252 = hoplon.app_pages._index_DOT_html.selected_date;
+var G__14029_14253 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(date) : cljs.core.deref.call(null,date));
+(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14028_14252,G__14029_14253) : cljs.core.reset_BANG_.call(null,G__14028_14252,G__14029_14253));
 
 return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(hoplon.app_pages._index_DOT_html.show_date_dialog,cljs.core.not);
-});})(G__14021,G__14022,G__14023,formatted_date,was_present_QMARK_,vec__14008,date,G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+});})(G__14022,G__14023,G__14024,formatted_date,was_present_QMARK_,vec__14009,date,G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 ;
-var G__14025 = formatted_date;
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14021,G__14022,G__14023,G__14024,G__14025) : hoplon.core.div.call(null,G__14021,G__14022,G__14023,G__14024,G__14025));
-});})(G__14005,G__14006,G__13980,G__13981,G__13982,vec__13977,year,year_dates,G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+var G__14026 = formatted_date;
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14022,G__14023,G__14024,G__14025,G__14026) : hoplon.core.div.call(null,G__14022,G__14023,G__14024,G__14025,G__14026));
+});})(G__14006,G__14007,G__13981,G__13982,G__13983,vec__13978,year,year_dates,G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 );
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14005,G__14006,G__14007) : hoplon.core.div.call(null,G__14005,G__14006,G__14007));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14006,G__14007,G__14008) : hoplon.core.div.call(null,G__14006,G__14007,G__14008));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13980,G__13981,G__13982,G__13983) : hoplon.core.div.call(null,G__13980,G__13981,G__13982,G__13983));
-});})(G__13974,G__13975,G__13853,G__13854,G__13855,G__13849,G__13850,dates_attended,presence,attendance,term_length,member_name,G__13511,G__13512,G__13513,G__13345,G__13346,G__13347,current_view))
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13981,G__13982,G__13983,G__13984) : hoplon.core.div.call(null,G__13981,G__13982,G__13983,G__13984));
+});})(G__13975,G__13976,G__13854,G__13855,G__13856,G__13850,G__13851,dates_attended,presence,attendance,term_length,member_name,G__13512,G__13513,G__13514,G__13346,G__13347,G__13348,current_view))
 );
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13974,G__13975,G__13976) : hoplon.core.div.call(null,G__13974,G__13975,G__13976));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13975,G__13976,G__13977) : hoplon.core.div.call(null,G__13975,G__13976,G__13977));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13853,G__13854,G__13855,G__13856) : hoplon.core.div.call(null,G__13853,G__13854,G__13855,G__13856));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13854,G__13855,G__13856,G__13857) : hoplon.core.div.call(null,G__13854,G__13855,G__13856,G__13857));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13849,G__13850,G__13851) : hoplon.core.div.call(null,G__13849,G__13850,G__13851));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__13850,G__13851,G__13852) : hoplon.core.div.call(null,G__13850,G__13851,G__13852));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13511,G__13512,G__13513,G__13514) : hoplon.core.div.call(null,G__13511,G__13512,G__13513,G__13514));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13512,G__13513,G__13514,G__13515) : hoplon.core.div.call(null,G__13512,G__13513,G__13514,G__13515));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13345,G__13346,G__13347,G__13348) : hoplon.core.div.call(null,G__13345,G__13346,G__13347,G__13348));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__13346,G__13347,G__13348,G__13349) : hoplon.core.div.call(null,G__13346,G__13347,G__13348,G__13349));
 })();
-var G__13325 = (function (){var title = javelin.core.formula(((function (G__13324){
-return (function (G__14031,G__14030,G__14029){
-if(cljs.core.truth_(G__14029)){
-var G__14032 = (G__14031.cljs$core$IFn$_invoke$arity$1 ? G__14031.cljs$core$IFn$_invoke$arity$1("MMM d, YYYY") : G__14031.call(null,"MMM d, YYYY"));
-var G__14033 = G__14029;
-return (G__14030.cljs$core$IFn$_invoke$arity$2 ? G__14030.cljs$core$IFn$_invoke$arity$2(G__14032,G__14033) : G__14030.call(null,G__14032,G__14033));
+var G__13326 = (function (){var title = javelin.core.formula(((function (G__13325){
+return (function (G__14032,G__14031,G__14030){
+if(cljs.core.truth_(G__14030)){
+var G__14033 = (G__14032.cljs$core$IFn$_invoke$arity$1 ? G__14032.cljs$core$IFn$_invoke$arity$1("MMM d, YYYY") : G__14032.call(null,"MMM d, YYYY"));
+var G__14034 = G__14030;
+return (G__14031.cljs$core$IFn$_invoke$arity$2 ? G__14031.cljs$core$IFn$_invoke$arity$2(G__14033,G__14034) : G__14031.call(null,G__14033,G__14034));
 } else {
 return null;
 }
-});})(G__13324))
+});})(G__13325))
 ).call(null,cljs_time.format.formatter,cljs_time.format.unparse,hoplon.app_pages._index_DOT_html.selected_date);
-var attendees = javelin.core.formula(((function (title,G__13324){
-return (function (G__14039,G__14040,G__14036,G__14038,G__14037,G__14035,G__14034){
-if(cljs.core.truth_(G__14034)){
-var G__14043 = cljs.core.cst$kw$member;
-var G__14044 = (function (){var G__14045 = G__14037;
-var G__14046 = (G__14038.cljs$core$IFn$_invoke$arity$2 ? G__14038.cljs$core$IFn$_invoke$arity$2(G__14039,G__14034) : G__14038.call(null,G__14039,G__14034));
-return (G__14036.cljs$core$IFn$_invoke$arity$2 ? G__14036.cljs$core$IFn$_invoke$arity$2(G__14045,G__14046) : G__14036.call(null,G__14045,G__14046));
+var attendees = javelin.core.formula(((function (title,G__13325){
+return (function (G__14040,G__14041,G__14037,G__14039,G__14038,G__14036,G__14035){
+if(cljs.core.truth_(G__14035)){
+var G__14044 = cljs.core.cst$kw$member;
+var G__14045 = (function (){var G__14046 = G__14038;
+var G__14047 = (G__14039.cljs$core$IFn$_invoke$arity$2 ? G__14039.cljs$core$IFn$_invoke$arity$2(G__14040,G__14035) : G__14039.call(null,G__14040,G__14035));
+return (G__14037.cljs$core$IFn$_invoke$arity$2 ? G__14037.cljs$core$IFn$_invoke$arity$2(G__14046,G__14047) : G__14037.call(null,G__14046,G__14047));
 })();
-return (G__14035.cljs$core$IFn$_invoke$arity$2 ? G__14035.cljs$core$IFn$_invoke$arity$2(G__14043,G__14044) : G__14035.call(null,G__14043,G__14044));
+return (G__14036.cljs$core$IFn$_invoke$arity$2 ? G__14036.cljs$core$IFn$_invoke$arity$2(G__14044,G__14045) : G__14036.call(null,G__14044,G__14045));
 } else {
-return (G__14040.cljs$core$IFn$_invoke$arity$1 ? G__14040.cljs$core$IFn$_invoke$arity$1((400)) : G__14040.call(null,(400)));
+return (G__14041.cljs$core$IFn$_invoke$arity$1 ? G__14041.cljs$core$IFn$_invoke$arity$1((400)) : G__14041.call(null,(400)));
 }
-});})(title,G__13324))
+});})(title,G__13325))
 ).call(null,hoplon.app_pages._index_DOT_html.date_formatter,cljs.core.range,cljs.core.get,cljs_time.format.unparse,hoplon.app_pages._index_DOT_html.date_members,cljs.core.mapv,hoplon.app_pages._index_DOT_html.selected_date);
-var attendee_count = javelin.core.formula(((function (title,attendees,G__13324){
-return (function (G__14048,G__14047){
-return (G__14047.cljs$core$IFn$_invoke$arity$1 ? G__14047.cljs$core$IFn$_invoke$arity$1(G__14048) : G__14047.call(null,G__14048));
-});})(title,attendees,G__13324))
+var attendee_count = javelin.core.formula(((function (title,attendees,G__13325){
+return (function (G__14049,G__14048){
+return (G__14048.cljs$core$IFn$_invoke$arity$1 ? G__14048.cljs$core$IFn$_invoke$arity$1(G__14049) : G__14048.call(null,G__14049));
+});})(title,attendees,G__13325))
 ).call(null,attendees,cljs.core.count);
-var member_count = javelin.core.formula(((function (title,attendees,attendee_count,G__13324){
-return (function (G__14050,G__14049){
-return (G__14049.cljs$core$IFn$_invoke$arity$1 ? G__14049.cljs$core$IFn$_invoke$arity$1(G__14050) : G__14049.call(null,G__14050));
-});})(title,attendees,attendee_count,G__13324))
+var member_count = javelin.core.formula(((function (title,attendees,attendee_count,G__13325){
+return (function (G__14051,G__14050){
+return (G__14050.cljs$core$IFn$_invoke$arity$1 ? G__14050.cljs$core$IFn$_invoke$arity$1(G__14051) : G__14050.call(null,G__14051));
+});})(title,attendees,attendee_count,G__13325))
 ).call(null,hoplon.app_pages._index_DOT_html.members,cljs.core.count);
-var attendance_percent = javelin.core.formula(((function (title,attendees,attendee_count,member_count,G__13324){
-return (function (G__14052,G__14051){
-return ((100) * (G__14051 / G__14052));
-});})(title,attendees,attendee_count,member_count,G__13324))
+var attendance_percent = javelin.core.formula(((function (title,attendees,attendee_count,member_count,G__13325){
+return (function (G__14053,G__14052){
+return ((100) * (G__14052 / G__14053));
+});})(title,attendees,attendee_count,member_count,G__13325))
 ).call(null,member_count,attendee_count);
-var formatted_attendance_percent = javelin.core.formula(((function (title,attendees,attendee_count,member_count,attendance_percent,G__13324){
-return (function (G__14053,G__14054){
-return (G__14053.cljs$core$IFn$_invoke$arity$2 ? G__14053.cljs$core$IFn$_invoke$arity$2("%.2f",G__14054) : G__14053.call(null,"%.2f",G__14054));
-});})(title,attendees,attendee_count,member_count,attendance_percent,G__13324))
+var formatted_attendance_percent = javelin.core.formula(((function (title,attendees,attendee_count,member_count,attendance_percent,G__13325){
+return (function (G__14054,G__14055){
+return (G__14054.cljs$core$IFn$_invoke$arity$2 ? G__14054.cljs$core$IFn$_invoke$arity$2("%.2f",G__14055) : G__14054.call(null,"%.2f",G__14055));
+});})(title,attendees,attendee_count,member_count,attendance_percent,G__13325))
 ).call(null,goog.string.format,attendance_percent);
-var close_date_dialog = ((function (title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,G__13324){
+var close_date_dialog = ((function (title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,G__13325){
 return (function (){
 return hoplon.app_pages._index_DOT_html.toggle_dialog(hoplon.app_pages._index_DOT_html.show_date_dialog);
-});})(title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,G__13324))
+});})(title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,G__13325))
 ;
-return hoplon.app_pages._index_DOT_html.dialog.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$open_QMARK_,hoplon.app_pages._index_DOT_html.show_date_dialog,cljs.core.cst$kw$close,close_date_dialog,(function (){var G__14055 = cljs.core.cst$kw$class;
-var G__14056 = "toolbar date-toolbar accented";
-var G__14057 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item",title) : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item",title));
-var G__14058 = hoplon.app_pages._index_DOT_html.spacer();
-var G__14059 = (function (){var G__14067 = cljs.core.cst$kw$class;
-var G__14068 = "toolbar-item";
-var G__14069 = (function (){var G__14070 = cljs.core.cst$kw$class;
-var G__14071 = "toolbar-icon";
-var G__14072 = cljs.core.cst$kw$css;
-var G__14073 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$font_DASH_size,"18px"], null);
-var G__14074 = cljs.core.cst$kw$click;
-var G__14075 = close_date_dialog;
-var G__14076 = "\u2715";
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$7 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$7(G__14070,G__14071,G__14072,G__14073,G__14074,G__14075,G__14076) : hoplon.core.div.call(null,G__14070,G__14071,G__14072,G__14073,G__14074,G__14075,G__14076));
+return hoplon.app_pages._index_DOT_html.dialog.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$open_QMARK_,hoplon.app_pages._index_DOT_html.show_date_dialog,cljs.core.cst$kw$close,close_date_dialog,(function (){var G__14056 = cljs.core.cst$kw$class;
+var G__14057 = "toolbar date-toolbar accented";
+var G__14058 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item",title) : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item",title));
+var G__14059 = hoplon.app_pages._index_DOT_html.spacer();
+var G__14060 = (function (){var G__14068 = cljs.core.cst$kw$class;
+var G__14069 = "toolbar-item";
+var G__14070 = (function (){var G__14071 = cljs.core.cst$kw$class;
+var G__14072 = "toolbar-icon";
+var G__14073 = cljs.core.cst$kw$css;
+var G__14074 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$font_DASH_size,"18px"], null);
+var G__14075 = cljs.core.cst$kw$click;
+var G__14076 = close_date_dialog;
+var G__14077 = "\u2715";
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$7 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$7(G__14071,G__14072,G__14073,G__14074,G__14075,G__14076,G__14077) : hoplon.core.div.call(null,G__14071,G__14072,G__14073,G__14074,G__14075,G__14076,G__14077));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14067,G__14068,G__14069) : hoplon.core.div.call(null,G__14067,G__14068,G__14069));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14068,G__14069,G__14070) : hoplon.core.div.call(null,G__14068,G__14069,G__14070));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14055,G__14056,G__14057,G__14058,G__14059) : hoplon.core.div.call(null,G__14055,G__14056,G__14057,G__14058,G__14059));
-})(),(function (){var G__14135 = cljs.core.cst$kw$class;
-var G__14136 = "padded border-bottom";
-var G__14137 = (function (){var G__14156 = cljs.core.cst$kw$class;
-var G__14157 = "info-group";
-var G__14158 = (function (){var G__14167 = cljs.core.cst$kw$class;
-var G__14168 = "info";
-var G__14169 = (function (){var G__14173 = cljs.core.cst$kw$class;
-var G__14174 = "value";
-var G__14175 = (function (){var t__11837__auto__ = document.createTextNode("");
-javelin.core.formula(((function (t__11837__auto__,G__14173,G__14174,G__14167,G__14168,G__14156,G__14157,G__14135,G__14136,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
-return (function (G__14176,G__14177){
-return G__14176.nodeValue = [cljs.core.str(G__14177),cljs.core.str("%")].join('');
-});})(t__11837__auto__,G__14173,G__14174,G__14167,G__14168,G__14156,G__14157,G__14135,G__14136,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14056,G__14057,G__14058,G__14059,G__14060) : hoplon.core.div.call(null,G__14056,G__14057,G__14058,G__14059,G__14060));
+})(),(function (){var G__14136 = cljs.core.cst$kw$class;
+var G__14137 = "padded border-bottom";
+var G__14138 = (function (){var G__14157 = cljs.core.cst$kw$class;
+var G__14158 = "info-group";
+var G__14159 = (function (){var G__14168 = cljs.core.cst$kw$class;
+var G__14169 = "info";
+var G__14170 = (function (){var G__14174 = cljs.core.cst$kw$class;
+var G__14175 = "value";
+var G__14176 = (function (){var t__11837__auto__ = document.createTextNode("");
+javelin.core.formula(((function (t__11837__auto__,G__14174,G__14175,G__14168,G__14169,G__14157,G__14158,G__14136,G__14137,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
+return (function (G__14177,G__14178){
+return G__14177.nodeValue = [cljs.core.str(G__14178),cljs.core.str("%")].join('');
+});})(t__11837__auto__,G__14174,G__14175,G__14168,G__14169,G__14157,G__14158,G__14136,G__14137,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 ).call(null,t__11837__auto__,formatted_attendance_percent);
 
 return t__11837__auto__;
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14173,G__14174,G__14175) : hoplon.core.div.call(null,G__14173,G__14174,G__14175));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14174,G__14175,G__14176) : hoplon.core.div.call(null,G__14174,G__14175,G__14176));
 })();
-var G__14170 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","attendance") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","attendance"));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14167,G__14168,G__14169,G__14170) : hoplon.core.div.call(null,G__14167,G__14168,G__14169,G__14170));
+var G__14171 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","attendance") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","attendance"));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14168,G__14169,G__14170,G__14171) : hoplon.core.div.call(null,G__14168,G__14169,G__14170,G__14171));
 })();
-var G__14159 = (function (){var G__14185 = cljs.core.cst$kw$class;
-var G__14186 = "info";
-var G__14187 = (function (){var G__14191 = cljs.core.cst$kw$class;
-var G__14192 = "value";
-var G__14193 = (function (){var t__11837__auto__ = document.createTextNode("");
-javelin.core.formula(((function (t__11837__auto__,G__14191,G__14192,G__14185,G__14186,G__14156,G__14157,G__14158,G__14135,G__14136,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
-return (function (G__14194,G__14195){
-return G__14194.nodeValue = [cljs.core.str(G__14195)].join('');
-});})(t__11837__auto__,G__14191,G__14192,G__14185,G__14186,G__14156,G__14157,G__14158,G__14135,G__14136,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+var G__14160 = (function (){var G__14186 = cljs.core.cst$kw$class;
+var G__14187 = "info";
+var G__14188 = (function (){var G__14192 = cljs.core.cst$kw$class;
+var G__14193 = "value";
+var G__14194 = (function (){var t__11837__auto__ = document.createTextNode("");
+javelin.core.formula(((function (t__11837__auto__,G__14192,G__14193,G__14186,G__14187,G__14157,G__14158,G__14159,G__14136,G__14137,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
+return (function (G__14195,G__14196){
+return G__14195.nodeValue = [cljs.core.str(G__14196)].join('');
+});})(t__11837__auto__,G__14192,G__14193,G__14186,G__14187,G__14157,G__14158,G__14159,G__14136,G__14137,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 ).call(null,t__11837__auto__,member_count);
 
 return t__11837__auto__;
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14191,G__14192,G__14193) : hoplon.core.div.call(null,G__14191,G__14192,G__14193));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14192,G__14193,G__14194) : hoplon.core.div.call(null,G__14192,G__14193,G__14194));
 })();
-var G__14188 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","present") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","present"));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14185,G__14186,G__14187,G__14188) : hoplon.core.div.call(null,G__14185,G__14186,G__14187,G__14188));
+var G__14189 = (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"desc","present") : hoplon.core.div.call(null,cljs.core.cst$kw$class,"desc","present"));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14186,G__14187,G__14188,G__14189) : hoplon.core.div.call(null,G__14186,G__14187,G__14188,G__14189));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14156,G__14157,G__14158,G__14159) : hoplon.core.div.call(null,G__14156,G__14157,G__14158,G__14159));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$4 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$4(G__14157,G__14158,G__14159,G__14160) : hoplon.core.div.call(null,G__14157,G__14158,G__14159,G__14160));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14135,G__14136,G__14137) : hoplon.core.div.call(null,G__14135,G__14136,G__14137));
-})(),(function (){var G__14206 = cljs.core.cst$kw$class;
-var G__14207 = "panel-content scrollable list-view";
-var G__14208 = hoplon.core.loop_tpl_STAR_(attendees,((function (G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14136,G__14137,G__14138) : hoplon.core.div.call(null,G__14136,G__14137,G__14138));
+})(),(function (){var G__14207 = cljs.core.cst$kw$class;
+var G__14208 = "panel-content scrollable list-view";
+var G__14209 = hoplon.core.loop_tpl_STAR_(attendees,((function (G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
 return (function (item__11816__auto__){
-var vec__14209 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
+var vec__14210 = javelin.core.cell_map(cljs.core.identity,javelin.core.formula(((function (G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
 return (function (attendee){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [attendee], null);
-});})(G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+});})(G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 ).call(null,item__11816__auto__));
-var attendee = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14209,(0),null);
-var attendee_name = javelin.core.formula(((function (vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
-return (function (G__14210){
-return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__14210);
-});})(vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
-).call(null,attendee);
-var attendee_id = javelin.core.formula(((function (attendee_name,vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
+var attendee = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14210,(0),null);
+var attendee_name = javelin.core.formula(((function (vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
 return (function (G__14211){
-return cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(G__14211);
-});})(attendee_name,vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+return cljs.core.cst$kw$full_name.cljs$core$IFn$_invoke$arity$1(G__14211);
+});})(vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 ).call(null,attendee);
-var G__14214 = cljs.core.cst$kw$click;
-var G__14215 = ((function (G__14214,attendee_name,attendee_id,vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324){
+var attendee_id = javelin.core.formula(((function (attendee_name,vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
+return (function (G__14212){
+return cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(G__14212);
+});})(attendee_name,vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
+).call(null,attendee);
+var G__14215 = cljs.core.cst$kw$click;
+var G__14216 = ((function (G__14215,attendee_name,attendee_id,vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325){
 return (function (){
 var member_list = document.getElementById("member-list");
 var member_list_item = document.getElementById([cljs.core.str("member"),cljs.core.str((cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(attendee_id) : cljs.core.deref.call(null,attendee_id)))].join(''));
 var mli_top = member_list_item.offsetTop;
-var G__14217_14253 = hoplon.app_pages._index_DOT_html.selected_member;
-var G__14218_14254 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(attendee) : cljs.core.deref.call(null,attendee));
-(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14217_14253,G__14218_14254) : cljs.core.reset_BANG_.call(null,G__14217_14253,G__14218_14254));
+var G__14218_14254 = hoplon.app_pages._index_DOT_html.selected_member;
+var G__14219_14255 = (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(attendee) : cljs.core.deref.call(null,attendee));
+(cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14218_14254,G__14219_14255) : cljs.core.reset_BANG_.call(null,G__14218_14254,G__14219_14255));
 
 (member_list["scrollTop"] = (mli_top - (64)));
 
 return close_date_dialog();
-});})(G__14214,attendee_name,attendee_id,vec__14209,attendee,G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+});})(G__14215,attendee_name,attendee_id,vec__14210,attendee,G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 ;
-var G__14216 = attendee_name;
-return (hoplon.core.li.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.li.cljs$core$IFn$_invoke$arity$3(G__14214,G__14215,G__14216) : hoplon.core.li.call(null,G__14214,G__14215,G__14216));
-});})(G__14206,G__14207,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13324))
+var G__14217 = attendee_name;
+return (hoplon.core.li.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.li.cljs$core$IFn$_invoke$arity$3(G__14215,G__14216,G__14217) : hoplon.core.li.call(null,G__14215,G__14216,G__14217));
+});})(G__14207,G__14208,title,attendees,attendee_count,member_count,attendance_percent,formatted_attendance_percent,close_date_dialog,G__13325))
 );
-return (hoplon.core.ul.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.ul.cljs$core$IFn$_invoke$arity$3(G__14206,G__14207,G__14208) : hoplon.core.ul.call(null,G__14206,G__14207,G__14208));
+return (hoplon.core.ul.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.ul.cljs$core$IFn$_invoke$arity$3(G__14207,G__14208,G__14209) : hoplon.core.ul.call(null,G__14207,G__14208,G__14209));
 })()], 0));
 })();
-var G__13326 = (function (){var close_about_dialog = ((function (G__13324,G__13325){
+var G__13327 = (function (){var close_about_dialog = ((function (G__13325,G__13326){
 return (function (){
 return hoplon.app_pages._index_DOT_html.toggle_dialog(hoplon.app_pages._index_DOT_html.show_about_dialog);
-});})(G__13324,G__13325))
+});})(G__13325,G__13326))
 ;
-return hoplon.app_pages._index_DOT_html.dialog.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$open_QMARK_,hoplon.app_pages._index_DOT_html.show_about_dialog,cljs.core.cst$kw$close,close_about_dialog,(function (){var G__14219 = cljs.core.cst$kw$class;
-var G__14220 = "toolbar accented";
-var G__14221 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item","About our data") : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item","About our data"));
-var G__14222 = hoplon.app_pages._index_DOT_html.spacer();
-var G__14223 = (function (){var G__14231 = cljs.core.cst$kw$class;
-var G__14232 = "toolbar-item";
-var G__14233 = (function (){var G__14234 = cljs.core.cst$kw$class;
-var G__14235 = "toolbar-icon";
-var G__14236 = cljs.core.cst$kw$css;
-var G__14237 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$font_DASH_size,"18px"], null);
-var G__14238 = cljs.core.cst$kw$click;
-var G__14239 = close_about_dialog;
-var G__14240 = "\u2715";
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$7 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$7(G__14234,G__14235,G__14236,G__14237,G__14238,G__14239,G__14240) : hoplon.core.div.call(null,G__14234,G__14235,G__14236,G__14237,G__14238,G__14239,G__14240));
+return hoplon.app_pages._index_DOT_html.dialog.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.cst$kw$open_QMARK_,hoplon.app_pages._index_DOT_html.show_about_dialog,cljs.core.cst$kw$close,close_about_dialog,(function (){var G__14220 = cljs.core.cst$kw$class;
+var G__14221 = "toolbar accented";
+var G__14222 = (hoplon.core.h1.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$class,"toolbar-item","About our data") : hoplon.core.h1.call(null,cljs.core.cst$kw$class,"toolbar-item","About our data"));
+var G__14223 = hoplon.app_pages._index_DOT_html.spacer();
+var G__14224 = (function (){var G__14232 = cljs.core.cst$kw$class;
+var G__14233 = "toolbar-item";
+var G__14234 = (function (){var G__14235 = cljs.core.cst$kw$class;
+var G__14236 = "toolbar-icon";
+var G__14237 = cljs.core.cst$kw$css;
+var G__14238 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$font_DASH_size,"18px"], null);
+var G__14239 = cljs.core.cst$kw$click;
+var G__14240 = close_about_dialog;
+var G__14241 = "\u2715";
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$7 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$7(G__14235,G__14236,G__14237,G__14238,G__14239,G__14240,G__14241) : hoplon.core.div.call(null,G__14235,G__14236,G__14237,G__14238,G__14239,G__14240,G__14241));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14231,G__14232,G__14233) : hoplon.core.div.call(null,G__14231,G__14232,G__14233));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$3(G__14232,G__14233,G__14234) : hoplon.core.div.call(null,G__14232,G__14233,G__14234));
 })();
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14219,G__14220,G__14221,G__14222,G__14223) : hoplon.core.div.call(null,G__14219,G__14220,G__14221,G__14222,G__14223));
-})(),(function (){var G__14241 = cljs.core.cst$kw$class;
-var G__14242 = "panel-content scrollable padded";
-var G__14243 = (hoplon.core.strong.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.strong.cljs$core$IFn$_invoke$arity$1("Our data is accurate as of Nov. 14, 2012") : hoplon.core.strong.call(null,"Our data is accurate as of Nov. 14, 2012"));
-var G__14244 = (hoplon.core.h2.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h2.cljs$core$IFn$_invoke$arity$1("Where do we get our data?") : hoplon.core.h2.call(null,"Where do we get our data?"));
-var G__14245 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Most of the publicly available congress journals contain roll call sections. This is where we get our data. There are also attendance sections, however, which we have yet to finish importing.") : hoplon.core.p.call(null,"Most of the publicly available congress journals contain roll call sections. This is where we get our data. There are also attendance sections, however, which we have yet to finish importing."));
-var G__14246 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Each roll call section can be pinpointed to a specific date, while attendance sections are tied to entire sessions/journals, which could span multiple days.") : hoplon.core.p.call(null,"Each roll call section can be pinpointed to a specific date, while attendance sections are tied to entire sessions/journals, which could span multiple days."));
-var G__14247 = (hoplon.core.h2.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h2.cljs$core$IFn$_invoke$arity$1("What does this mean?") : hoplon.core.h2.call(null,"What does this mean?"));
-var G__14248 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Technically, absence in our records is not equivalent to absence for the entire day of the corresponding roll call record. What it means is that during the time of the roll call, the person in question was not present. In general, quorum is dependent on the roll.") : hoplon.core.p.call(null,"Technically, absence in our records is not equivalent to absence for the entire day of the corresponding roll call record. What it means is that during the time of the roll call, the person in question was not present. In general, quorum is dependent on the roll."));
-var G__14249 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("It is entirely possible that the person arrived late after the roll call, but as we cannot verify this at the moment, we currently do not make the distinction.") : hoplon.core.p.call(null,"It is entirely possible that the person arrived late after the roll call, but as we cannot verify this at the moment, we currently do not make the distinction."));
-var G__14250 = (hoplon.core.a.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.a.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$href,"http://rollcall.ph/api/dump","Take a look at our raw data.") : hoplon.core.a.call(null,cljs.core.cst$kw$href,"http://rollcall.ph/api/dump","Take a look at our raw data."));
-return (hoplon.core.div.cljs$core$IFn$_invoke$arity$10 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$10(G__14241,G__14242,G__14243,G__14244,G__14245,G__14246,G__14247,G__14248,G__14249,G__14250) : hoplon.core.div.call(null,G__14241,G__14242,G__14243,G__14244,G__14245,G__14246,G__14247,G__14248,G__14249,G__14250));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$5 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$5(G__14220,G__14221,G__14222,G__14223,G__14224) : hoplon.core.div.call(null,G__14220,G__14221,G__14222,G__14223,G__14224));
+})(),(function (){var G__14242 = cljs.core.cst$kw$class;
+var G__14243 = "panel-content scrollable padded";
+var G__14244 = (hoplon.core.strong.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.strong.cljs$core$IFn$_invoke$arity$1("Our data is accurate as of Nov. 14, 2012") : hoplon.core.strong.call(null,"Our data is accurate as of Nov. 14, 2012"));
+var G__14245 = (hoplon.core.h2.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h2.cljs$core$IFn$_invoke$arity$1("Where do we get our data?") : hoplon.core.h2.call(null,"Where do we get our data?"));
+var G__14246 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Most of the publicly available congress journals contain roll call sections. This is where we get our data. There are also attendance sections, however, which we have yet to finish importing.") : hoplon.core.p.call(null,"Most of the publicly available congress journals contain roll call sections. This is where we get our data. There are also attendance sections, however, which we have yet to finish importing."));
+var G__14247 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Each roll call section can be pinpointed to a specific date, while attendance sections are tied to entire sessions/journals, which could span multiple days.") : hoplon.core.p.call(null,"Each roll call section can be pinpointed to a specific date, while attendance sections are tied to entire sessions/journals, which could span multiple days."));
+var G__14248 = (hoplon.core.h2.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h2.cljs$core$IFn$_invoke$arity$1("What does this mean?") : hoplon.core.h2.call(null,"What does this mean?"));
+var G__14249 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("Technically, absence in our records is not equivalent to absence for the entire day of the corresponding roll call record. What it means is that during the time of the roll call, the person in question was not present. In general, quorum is dependent on the roll.") : hoplon.core.p.call(null,"Technically, absence in our records is not equivalent to absence for the entire day of the corresponding roll call record. What it means is that during the time of the roll call, the person in question was not present. In general, quorum is dependent on the roll."));
+var G__14250 = (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IFn$_invoke$arity$1("It is entirely possible that the person arrived late after the roll call, but as we cannot verify this at the moment, we currently do not make the distinction.") : hoplon.core.p.call(null,"It is entirely possible that the person arrived late after the roll call, but as we cannot verify this at the moment, we currently do not make the distinction."));
+var G__14251 = (hoplon.core.a.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.a.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$href,"http://rollcall.ph/api/dump","Take a look at our raw data.") : hoplon.core.a.call(null,cljs.core.cst$kw$href,"http://rollcall.ph/api/dump","Take a look at our raw data."));
+return (hoplon.core.div.cljs$core$IFn$_invoke$arity$10 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$10(G__14242,G__14243,G__14244,G__14245,G__14246,G__14247,G__14248,G__14249,G__14250,G__14251) : hoplon.core.div.call(null,G__14242,G__14243,G__14244,G__14245,G__14246,G__14247,G__14248,G__14249,G__14250,G__14251));
 })()], 0));
 })();
-return (hoplon.core.body.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.body.cljs$core$IFn$_invoke$arity$3(G__13324,G__13325,G__13326) : hoplon.core.body.call(null,G__13324,G__13325,G__13326));
+return (hoplon.core.body.cljs$core$IFn$_invoke$arity$3 ? hoplon.core.body.cljs$core$IFn$_invoke$arity$3(G__13325,G__13326,G__13327) : hoplon.core.body.call(null,G__13325,G__13326,G__13327));
 })()], 0));
