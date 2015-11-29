@@ -113,7 +113,8 @@
 (html
  (head
 	(link :href "https://fonts.googleapis.com/css?family=Raleway:400,300,700" :rel "stylesheet")
-	(link :href "css/main.css" :rel "stylesheet"))
+	(link :href "css/main.css" :rel "stylesheet")
+	(link :href "style.css" :rel "stylesheet"))
 
  (body
 
@@ -123,7 +124,8 @@
 							(h1 :class "toolbar-item" "Rollcall")
 							(spacer)
 							(toolbar-item :click #(toggle-dialog show-about-dialog) "About our data")
-							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
+							(a :class "toolbar-item" :href "http://torchapps.github.io"
+								 (span :class "icon-torch toolbar-icon")))
 				 (div :class "panel-content split-view"
 							(div :class "minor view panel"
 									 (ul :class "panel-content scrollable list-view"

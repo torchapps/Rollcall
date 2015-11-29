@@ -20,6 +20,8 @@
 	[:a {:color accent}]
 	[:.border-bottom {:border-bottom "1px solid #eee"}]
 
+	[:.icon-torch {:font-size (px 24)}]
+
 	[:.fill {:position "absolute"
 					 :top 0
 					 :left 0
@@ -58,6 +60,8 @@
 										:align-items "center"
 										:cursor "pointer"}
 		[:&.selected {:color accent}]]
+	 [:a.toolbar-item {:color light
+										 :text-decoration "none"}]
 	 [:.toolbar-icon {:width (px 44)
 										:height (px 44)
 										:display "inline-flex"
