@@ -27,7 +27,6 @@
 ;; dialogs
 (defc show-date-dialog false)
 (defc show-about-dialog false)
-(defc show-donate-dialog false)
 
 (defn toggle-dialog
 	[dialog]
@@ -118,8 +117,7 @@
 				 (div :class "toolbar main"
 							(h1 :class "toolbar-item" "Rollcall")
 							(spacer)
-							(toolbar-item :click #(toggle-dialog show-about-dialog) "About")
-							(toolbar-item :click #(toggle-dialog show-donate-dialog) "Donate")
+							(toolbar-item :click #(toggle-dialog show-about-dialog) "About our data")
 							(toolbar-item (a :href "http://torchapps.github.io" "See more apps by Torch")))
 				 (div :class "panel-content split-view"
 							(div :class "minor view panel"
@@ -187,12 +185,13 @@
 				close-date-dialog #(toggle-dialog show-date-dialog)]
 		(dialog :open? show-date-dialog
 						:close close-date-dialog
-						(div :class "toolbar date-toolbar"
+						(div :class "toolbar date-toolbar accented"
 								 (h1 :class "toolbar-item" title)
 								 (spacer)
-								 (div :class "toolbar-icon" :css {:font-size "18px"}
-											:click close-date-dialog
-											"\u2715"))
+								 (div :class "toolbar-item"
+											(div :class "toolbar-icon" :css {:font-size "18px"}
+													 :click close-date-dialog
+													 "\u2715")))
 						(div :class "padded border-bottom"
 								 (div :class "info-group"
 											(div :class "info"
@@ -213,14 +212,20 @@
 	(let [close-about-dialog #(toggle-dialog show-about-dialog)]
 		(dialog :open? show-about-dialog
 						:close close-about-dialog
-						(div :class "toolbar"
+						(div :class "toolbar accented"
 								 (h1 :class "toolbar-item"
-										 "About")
-								 (spacer))))
-
-	(let [close-donate-dialog #(toggle-dialog show-donate-dialog)]
-		(dialog :open? show-donate-dialog
-						:close close-donate-dialog
-						(div :class "toolbar"
-								 (h1 :class "toolbar-item"
-										 "Donate"))))))
+										 "About our data")
+								 (spacer)
+								 (div :class "toolbar-item"
+											(div :class "toolbar-icon" :css {:font-size "18px"}
+													 :click close-about-dialog
+													 "\u2715")))
+						(div :class "panel-content scrollable padded"
+								 (strong "Our data is accurate as of Nov. 14, 2012")
+								 (h2 "Where do we get our data?")
+								 (p "Most of the publicly available congress journals contain roll call sections. This is where we get our data. There are also attendance sections, however, which we have yet to finish importing.")
+								 (p "Each roll call section can be pinpointed to a specific date, while attendance sections are tied to entire sessions/journals, which could span multiple days.")
+								 (h2 "What does this mean?")
+								 (p "Technically, absence in our records is not equivalent to absence for the entire day of the corresponding roll call record. What it means is that during the time of the roll call, the person in question was not present. In general, quorum is dependent on the roll.")
+								 (p "It is entirely possible that the person arrived late after the roll call, but as we cannot verify this at the moment, we currently do not make the distinction.")
+								 (a :href "http://rollcall.ph/api/dump" "Take a look at our raw data."))))))

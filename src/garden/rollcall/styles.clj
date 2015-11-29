@@ -47,11 +47,15 @@
 							:height (px 64)
 							:padding-left (px 8)
 							:padding-right (px 8)
-							:align-items "center"}
+							:align-items "stretch"}
 	 [:&.main {:background-color dark
 						 :color light}]
+	 [:&.accented {:background-color accent
+								 :color light}]
 	 [:.toolbar-item {:padding-left (px 8)
 										:padding-right (px 8)
+										:display "flex"
+										:align-items "center"
 										:cursor "pointer"}
 		[:&.selected {:color accent}]]
 	 [:.toolbar-icon {:width (px 44)
@@ -60,7 +64,8 @@
 										:justify-content "center"
 										:align-items "center"
 										:border-radius (percent 50)
-										:cursor "pointer"}]
+										:cursor "pointer"}
+		[:&:hover {:background-color "rgba(0,0,0,0.2)"}]]
 	 [:h1 {:margin 0
 				 :font-size (px 16)
 				 :text-transform "uppercase"}]]
