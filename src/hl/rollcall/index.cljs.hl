@@ -217,7 +217,7 @@
 																							member-list-item (js/jQuery (str "#member" @attendee-id))
 																							mli-top (.-top (.offset member-list-item))]
 																					(reset! selected-member @attendee)
-																					(.animate member-list #js {:scrollTop (- mli-top 64)})
+																					(.animate member-list #js {:scrollTop (+ mli-top -64 (.scrollTop member-list))})
 																					(close-date-dialog))
 																attendee-name))))))
 
